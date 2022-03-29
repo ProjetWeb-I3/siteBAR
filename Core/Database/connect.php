@@ -11,10 +11,10 @@
     <body>
         
         <?php
-            $servernameBDD = 'localhost';
-            $usernameBDD = 'root';
-            $passwordBDD = 'root';
-            $BDDname = 'Projet-WEB-I3-SHOP';
+            $servernameBDD = '145.14.151.101';
+            $usernameBDD = 'u556968436_TeamWebsiteBar';
+            $passwordBDD = 'TeamWebsiteBar2022';
+            $BDDname = 'u556968436_siteBAR';
             global $conn;
 
             //On essaie de se connecter
