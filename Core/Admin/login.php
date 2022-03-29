@@ -25,15 +25,15 @@
 
 
 
-            $req = $conn->prepare('SELECT * FROM Users WHERE mail = ?' );
+            $req = $conn->prepare('SELECT * FROM users WHERE mail_users = ?' );
 			$req -> execute(array($mailAdmin));
 
 
             $userinfoAdmin = $req->fetch();
             $userAdmin = $req->rowCount();
 
-            $passwordAdminVerif = $userinfoAdmin['password'];
-            $rankAdmin = $userinfoAdmin['rankLevel'];
+            $passwordAdminVerif = $userinfoAdmin['password_users'];
+            $rankAdmin = $userinfoAdmin['rank_users'];
             echo $rankAdmin;
 
 
@@ -41,7 +41,7 @@
 
                 if (hash_equals($passwordAdminVerif, crypt($passwordAdmin, $passwordAdminVerif)))
                 {
-                    if($rankAdmin = 'MEMBER')
+                    if($rankAdmin = 'ADMIN')
                     {
                         $_SESSION['adminBAR'] = $_POST['mailAdmin'];
                         header('location:index.php');
