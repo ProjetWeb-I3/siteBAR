@@ -11,7 +11,7 @@
 
 <?php 
 
-session_start();
+
 require('../functionCo/functionLog.php');
 $inscription = register();
 global $IndexLink, $RegisterLink;

@@ -33,33 +33,41 @@
                 <li class="item primary_animation"><a href="#">CONTACT</a></li>
 
 
+                <?php
+                if(isset($_SESSION['id_user']) AND $_GET['id_user']>0)
+                {
+                    $getid =$_SESSION['id_user'];
+                    $requser = $conn->prepare('SELECT * FROM Users WHERE id_user = ?');
+                    $requser->execute(array($getid));
+                    $userinfo = $requser->fetch();
+                    ?>
 
-        <?php
 
+                    <?php
+                    if (isset($_SESSION['id_user']) AND $userinfo['id_user'] == $_SESSION['id_user'])
+                    {
+                        ?>
 
-        $id = 1;
+                        <li class="item button "><a class= "text-font over_size-connexion" href="Sections/Pages/Profile/espaceCo/logout.php">Deconnexion</a></li>
+                        <li class="item button "><a class= "text-font over_size-connexion" href="#">Profil</a></li>
+                        <!--                <li class="toggle"><span class="bars"></span></li>-->
 
+                        <?php
+                    }
+                    ?>
+                    <?php
+                }
+                else
+                {
+                    ?>
 
-        if ($id == 1) {
-            ?>
+                    <li class="item button "><a class= "text-font over_size-connexion" href="Sections/Pages/Profile/espaceCo/login.php">Connexion</a></li>
+                    <li class="item button "><a class= "text-font over_size-connexion" href="Sections/Pages/Profile/espaceCo/Register.php">Inscription</a></li>
+                    <li class="toggle"><span class="bars"></span></li>
 
-            <li class="item button"><a class="text-font over_size-connexion" href=#>Connexion</a></li>
-            <!--<li class="item button secondary"><a href="#">Profil</a></li>-->
-            <li class="toggle"><span class="bars"></span></li>
-
-            <?php
-        } else {
-            ?>
-
-            <li class="item button color text button"><a href="#">Connexion</a></li>
-            <li class="item button secondary"><a href="#">Inscription</a></li>
-            <li class="toggle"><span class="bars"></span></li>
-
-            <?php
-        }
-
-        ?>
-
+                    <?php
+                }
+                ?>
 
         </ul>
     </nav>

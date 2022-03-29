@@ -10,7 +10,7 @@
 
 
 <?php 
-session_start();
+
 require('../functionCo/functionLog.php');
 $connexion = VerifLogin();
 global $IndexLink, $RegisterLink;
