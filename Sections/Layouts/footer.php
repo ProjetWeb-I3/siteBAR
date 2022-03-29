@@ -43,14 +43,14 @@
                     <!-- <li><a href="PapiersAssociation/Statuts.pdf">L'association</a></li>
                     <li><a href="PapiersAssociation/R.pdf">Réglement intérieur</a></li>
                     <li><a href="https://lydia-app.com/collect/17895-les-poubelles-rouges/fr">La cagnotte</a></li> -->
-                    <li><a href="#">Document publicitaire</a></li>
+                    <li><a href="https://fr-fr.facebook.com/pages/category/Cleaning-Service/SAS-Nettysol-1692848397395910/">Document publicitaire</a></li>
 
                 </ul>
             </div>
             <div class="footer-col">
                 <h4>Reseaux</h4>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/star.bar_s/?hl=fr"><i class="fab fa-instagram fa-fw"></i></a>
+                    <a href="https://fr-fr.facebook.com/pages/category/Cleaning-Service/SAS-Nettysol-1692848397395910/"><i class="fab fa-instagram fa-fw"></i></a>
                     <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
 
 

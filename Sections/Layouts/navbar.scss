@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
 
+
+
 $main-color: yellow;
 
 header{
@@ -248,6 +250,9 @@ body {
 }
 
 @media all and (max-width: 720px){
+  .button a {
+    padding: 7.5px 15px;
+  }
   .primary_animation{
     text-decoration: none;
     color: transparent;
@@ -256,6 +261,13 @@ body {
   }
 
   .item.active{
-      visibility: visible;
+    visibility: visible;
+
+
+  }
+  .bigger{
+    height:50%;
   }
 }
+
+
