@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*pour la baniere de presentation */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.copyright {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/*pour le footer*/
+.container2 {
+  max-width: 1170px;
+  align-items: center;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #111;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 30px 30px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: yellow;
+  /*text-transform: capitalize;*/
+  margin-bottom: 35px;
+  font-weight: 600;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: yellow;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: yellow;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #222;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+.ref {
+  font-size: 15px;
+}
+
+header {
+  margin-bottom: 0;
+  height: 8%;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  order: 1;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  width: 100%;
+  text-align: center;
+  order: 3;
+  display: none;
+}
+
+.item.active {
+  display: block;
+}
+
+/* Navbar Toggle */
+.toggle {
+  cursor: pointer;
+}
+
+.bars {
+  background: yellow;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+}
+
+.bars:before,
+.bars:after {
+  background: yellow;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.bars:before {
+  top: 5px;
+}
+
+.bars:after {
+  top: -5px;
+}
+
+/* Tablet menu*/
+@media all and (min-width: 468px) {
+  .menu {
+    justify-content: center;
+  }
+
+  .z-index {
+    z-index: 0;
+  }
+
+  .logo.over {
+    flex: 1;
+  }
+
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+
+  .toggle {
+    order: 2;
+  }
+
+  .button.secondary {
+    border: 0;
+  }
+
+  .button a {
+    padding: 7.5px 15px;
+    background: #f0e116;
+    border: 1px #b4ab2f solid;
+    border-radius: 50em;
+  }
+
+  .button.secondary a {
+    background: transparent;
+  }
+
+  .button a:hover {
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  .button.secondary a:hover {
+    color: #ddd;
+  }
+}
+.text-font.over {
+  text-decoration: none;
+  color: white;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 26px;
+}
+.text-font.over_size-connexion {
+  border: 1px #b4ab2f solid;
+  background-color: yellow;
+  border-radius: 50em;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+.text-font.over_size-connexion:hover {
+  background-image: linear-gradient(to right, yellow, yellow 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff78d;
+  color: black;
+}
+
+/* Desktop menu */
+@media all and (min-width: 768px) {
+  .item {
+    display: block;
+    width: auto;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  .item {
+    order: 1;
+  }
+
+  .button {
+    order: 2;
+  }
+
+  .menu li {
+    padding: 15px 10px;
+  }
+
+  .menu li.button {
+    padding-right: 0;
+  }
+}
+body {
+  font-family: sans-serif;
+}
+
+.primary {
+  position: absolute;
+  top: 0;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  background: #222;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.primary_animation {
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, yellow, yellow 50%, #fff 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+}
+.primary_animation:before {
+  display: block;
+  content: "";
+  width: 0;
+  height: 3px;
+  bottom: 5px;
+  left: 0;
+  bottom: -3px;
+  z-index: 1;
+  position: absolute;
+  background: yellow;
+  transition: all 0.3s ease-in-out;
+}
+.primary_animation:hover {
+  background-position: 0%;
+}
+.primary_animation:hover:before {
+  width: 100%;
+}
+.primary li {
+  margin: 0 20px;
+  position: relative;
+}
+
+@media all and (max-width: 720px) {
+  .primary_animation {
+    text-decoration: none;
+    color: transparent;
+    z-index: 9999;
+    visibility: hidden;
+  }
+
+  .item.active {
+    visibility: visible;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

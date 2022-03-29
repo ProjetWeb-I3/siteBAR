@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "sass": "^1.49.9"
+  },
+  "name": "testnavbar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ../Core/CSS-Global/styles.scss:../Core/CSS-Global/CSS/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
