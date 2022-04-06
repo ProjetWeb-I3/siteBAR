@@ -27,8 +27,8 @@
             <ul class="menu primary">
                 <li class="logo over"><a class="text-font over" href="#">BAR ICAM TOULOUSE</a></li>
                 <li class="item primary_animation"><a href="#">ACCUEIL</a></li>
-                <li class="item primary_animation"><a href="#">PRODUITS</a></li>
-                <li class="item primary_animation"><a href="#">BONS PLANS</a></li>
+                <li class="item primary_animation"><a href="Sections/Pages/products/produits.php">PRODUITS</a></li>
+                <li class="item primary_animation"><a href="Sections/Pages/Recommandation/Backend/recommandation.php">BONS PLANS</a></li>
                 <li class="item primary_animation"><a href="#">PANIER</a></li>
                 <li class="item primary_animation"><a href="#">CONTACT</a></li>
 
