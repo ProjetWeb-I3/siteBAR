@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>inscription</title>
-	<link rel="stylesheet" type="text/css" href="styleEspaceCo.css">
+	<link rel="stylesheet" type="text/css" href="IdeaProjects/siteBAR/Views/Pages/Authentication/styleEspaceCo.css">
 </head>
 <body>
 
@@ -121,7 +121,7 @@ global $IndexLink, $RegisterLink;
 
 
 			<div class="signup_link">
-				Déjà membre ?<a href="login.php"> Connexion</a><a href="<?php echo $IndexLink ; ?>"> / Retour</a><br\>
+				Déjà membre ?<a href="IdeaProjects/siteBAR/Views/Pages/Authentication/login.php"> Connexion</a><a href="<?php echo $IndexLink ; ?>"> / Retour</a><br\>
                 <br/>
                 <br/>
                 <?php
