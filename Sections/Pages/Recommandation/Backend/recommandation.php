@@ -1,6 +1,6 @@
 <?php
 $imageUrlProduits = "Sections/Pages/products/img/";
-$imageUrlVNB = "Sections/Pages/Recommandation/img/logoVNB.png";
+$imageUrlVNB = "Sections/Pages/Recommandation/img/";
 require('../../../Layouts/navbar.php');
 
 ?>
@@ -9,8 +9,7 @@ require('../../../Layouts/navbar.php');
 
     <div><p> Venez dès à présent visiter les lieux que nous avons aimés !</p>
 
-        <img src="<?php echo $imageUrlVNB?>">
-
+        <img src="<?php echo $imageUrlVNB?>logoVNB.png" alt=" ">
 
 
     </div>
