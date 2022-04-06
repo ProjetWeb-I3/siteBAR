@@ -17,7 +17,7 @@
 require('Models/DatabaseModel/connect.php');
 session_start();
 require('Views/Layouts/navbar.php');
-$imageUrl = "Core/img/imageBar/interieur.jpg";
+$imageUrl = "Views/img/imageBar/interieur.jpg";
 
 ?>
 
