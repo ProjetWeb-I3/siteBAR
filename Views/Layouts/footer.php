@@ -47,7 +47,7 @@
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>Reseaux</h4>
+                <h4>Réseaux</h4>
                 <div class="social-links">
                     <a href="https://www.instagram.com/star.bar_s/"><i class="fab fa-instagram fa-fw"></i></a>
                     <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
