@@ -7,14 +7,14 @@
     <script src="https://kit.fontawesome.com/ad46913740.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
     
-    <link rel="stylesheet" type="text/css" href="IdeaProjects/siteBAR/Views/CSS-Global/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="Views/CSS-Global/CSS/style.css">
 
 </head>
 <body>
 
 
 <?php
-require('Core/Database/connect.php');
+require('Models/DatabaseModel/connect.php');
 session_start();
 require('Views/Layouts/navbar.php');
 $imageUrl = "Core/img/imageBar/interieur.jpg";

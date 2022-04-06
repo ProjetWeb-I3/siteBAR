@@ -5,7 +5,7 @@ $imageUrlProduits = "Sections/Pages/products/img/";
 ?>
 
 
-
+<link rel="stylesheet" type="text/css" href="siteBAR/Views/Pages/products/produits.scss">
 <!-- <section class="produitBiere" id="produitBiere">
  -->
 <div class="produitBiere">

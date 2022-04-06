@@ -1,8 +1,7 @@
 
 /*@import url("Sections/Layouts/.public-footer/"); !* import grid CSS *!*/
-@import url("Views/Layouts/.public-navbar/css/style.css");
-@import url("Views/Layouts/.public-footer/css/style.css");
-@import url("Views/Pages/products/produits.css"); /* import grid CSS */
+
+/* import grid CSS */
 
 
 
@@ -79,7 +78,7 @@ p{
   color: #fff;
   margin-top: 20px;
   padding: 10px 30px;
-  font-style: 24px;
+  /*font-style: 24 px;*/
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
@@ -96,8 +95,7 @@ p{
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 10px 30px;
-  font-style: 18px;
+  //font-style: 18px;
   font-weight: 500;
   border: 2px solid;
   border-color: #fff;
