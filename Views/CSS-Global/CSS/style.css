@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*pour la baniere de presentation */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -358,6 +359,10 @@ body {
 }
 
 @media all and (max-width: 720px) {
+  .button a {
+    padding: 7.5px 15px;
+  }
+
   .primary_animation {
     text-decoration: none;
     color: transparent;
@@ -368,6 +373,233 @@ body {
   .item.active {
     visibility: visible;
   }
+
+  .bigger {
+    height: 50%;
+  }
+}
+:root {
+  --jaune:#FFFF00;
+  --black:#111;
+  --light-color:#666;
+  --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+* {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  /*margin:0; padding:0;*/
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  /*transition: all .2s linear;*/
+}
+
+.fas.fa-heart, .fas.fa-eye {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+.produitBiere {
+  padding: 2rem 9%;
+}
+
+.produitBiere:nth-child(even) {
+  background: #eee;
+}
+
+.btnPRODUCT {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  background: var(--black);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.8rem 3rem;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.btnPRODUCT:hover {
+  background: var(--jaune);
+  /*letter-spacing: .1rem;*/
+  color: #111;
+  /*border: 1px solid;*/
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+.produitBiere .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.5rem;
+}
+
+.produitBiere .box-container .box {
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.produitBiere .box-container .box .fa-heart,
+.produitBiere .box-container .box .fa-eye {
+  position: absolute;
+  top: 1.5rem;
+  background: #eee;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.produitBiere .box-container .box .fa-heart:hover,
+.produitBiere .box-container .box .fa-eye:hover {
+  background: var(--jaune);
+  color: #111;
+}
+
+.produitBiere .box-container .box .fa-heart {
+  right: -15rem;
+}
+
+.produitBiere .box-container .box .fa-eye {
+  left: -15rem;
+}
+
+.produitBiere .box-container .box:hover .fa-heart {
+  right: 1.5rem;
+}
+
+.produitBiere .box-container .box:hover .fa-eye {
+  left: 1.5rem;
+}
+
+.produitBiere .box-container .box img {
+  height: 17rem;
+  margin: 1rem 0;
+}
+
+.produitBiere .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+}
+
+.produitBiere .box-container .box .stars {
+  padding: 1rem 0;
+}
+
+.produitBiere .box-container .box .stars i {
+  font-size: 1.7rem;
+  color: var(--green);
+}
+
+.produitBiere .box-container .box span {
+  color: var(--green);
+  font-weight: bolder;
+  margin-right: 1rem;
+  font-size: 2.5rem;
+}
+
+/*@import url("Sections/Layouts/.public-footer/"); !* import grid CSS *!*/
+/* import grid CSS */
+/*pour la baniere de presentation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 100px 10px 100px;
+}
+
+.banner {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), center/cover no-repeat fixed;
+  background-size: cover;
+  background-position: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+.banner h1 {
+  margin-top: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.banner h2 {
+  font-size: 5em;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.banner h2 span {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.banner h3 {
+  font-size: 6em;
+  color: #FFFF00;
+  font-weight: 700;
+  line-height: 1em;
+}
+
+.btnPropos {
+  font-size: 2em;
+  position: relative;
+  background: #2d2d2d;
+  display: inline-block;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px 30px;
+  /*font-style: 24 px;*/
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.btnPropos:hover {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+  background: #2d2d2d;
+  color: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border: 2px solid;
+  border-color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
