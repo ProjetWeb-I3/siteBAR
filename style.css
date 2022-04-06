@@ -1,8 +1,8 @@
 
 /*@import url("Sections/Layouts/.public-footer/"); !* import grid CSS *!*/
-@import url("Sections/Layouts/.public-navbar/css/style.css");
-@import url("Sections/Layouts/.public-footer/css/style.css");
-@import url("Sections/Pages/products/produits.css"); /* import grid CSS */
+@import url("Views/Layouts/.public-navbar/css/style.css");
+@import url("Views/Layouts/.public-footer/css/style.css");
+@import url("Views/Pages/products/produits.css"); /* import grid CSS */
 
 
 
