@@ -24,8 +24,7 @@
                 <h4>Liens Utiles</h4>
                 <ul>
                     <li><a href="#propos">A propos</a></li>
-                    <li><a href="#produits">Nos produits</a></li>
-                    <!-- <li><a href="#services">Nos services</a></li> -->
+                    <li><a href="../Pages/products/produits.php">Nos produits</a></li>
                     <li><a href="#contacts">Nous contacter</a></li>
                 </ul>
             </div>
@@ -50,7 +49,7 @@
             <div class="footer-col">
                 <h4>Reseaux</h4>
                 <div class="social-links">
-                    <a href="https://fr-fr.facebook.com/pages/category/Cleaning-Service/SAS-Nettysol-1692848397395910/"><i class="fab fa-instagram fa-fw"></i></a>
+                    <a href="https://www.instagram.com/star.bar_s/"><i class="fab fa-instagram fa-fw"></i></a>
                     <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
 
 
