@@ -1,7 +1,7 @@
 
 /*@import url("Sections/Layouts/.public-footer/"); !* import grid CSS *!*/
 @import url("Sections/Layouts/.public-navbar/css/style.css");
-@import url("Sections/Layouts/footer.css"); /* import grid CSS */
+@import url("Sections/Layouts/.public-footer/css/style.css");
 @import url("Sections/Pages/products/produits.css"); /* import grid CSS */
 
 
