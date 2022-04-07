@@ -1,11 +1,7 @@
 <!-- produitBiere section starts  -->
 
 <?php
-/*require_once '../../../Models/DatabaseModel/connect.php';
-require_once '../../../Controllers/AdminControllers/ProductController/getProduct.php';
-require '../../../Models/ProductsModel/productInfo.php';*/
-$imageUrlProduits = "../img/";
-$before_image =
+    $before_image =
     '<div class="box">
             <a href="#" class="fas fa-heart"></a>
             <a href="#" class="fas fa-eye"></a>';
@@ -48,26 +44,29 @@ $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur l
         require_once '../../../Models/DatabaseModel/connect.php';
         require_once '../../../Controllers/AdminControllers/ProductController/getProduct.php';
         global $conn;
-
+//
         $req = $conn->query('SELECT * FROM products ');
         while($article = $req->fetch()){
-            echo $before_image;
+            if($article['visibility'] == 1){
+                echo $before_image;
+                echo $article['visibility'];
+                echo '<img src="';
+                echo $article["image_products"];
+                echo '" alt="">';
 
-            echo '<img src="';
-            echo $article["image_products"];
-            echo '" alt="">';
+                echo '<h3>';
+                echo $article["name_products"];
+                echo '</h3>';
 
-            echo '<h3>';
-            echo $article["name_products"];
-            echo '</h3>';
+                echo $stars;
 
-            echo $stars;
+                echo '<span>';
+                echo $article["price_products"];
+                echo '</span>';
 
-            echo '<span>';
-            echo $article["price_products"];
-            echo '</span>';
+                echo $after_price;
+            }
 
-            echo $after_price;
 
         }
         ?>
