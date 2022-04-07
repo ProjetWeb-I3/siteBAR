@@ -1,7 +1,7 @@
 <!-- produitBiere section starts  -->
 
 <?php 
-$imageUrlProduits = "Sections/Pages/products/img/";
+$imageUrlProduits = "../img/";
 ?>
 <!--
 <a href="https://ibb.co/9pTFXfM"><img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="chouffe" border="0"></a>
