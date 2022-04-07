@@ -8,12 +8,10 @@ session_start();
 
 global $LoginLink, $RegisterLink, $BDDlink, $IndexLink, $conn;
 
-$BDDlink='../../../../Core/Database/connect.php';
-$LoginLink = "../espaceCo/login.php";
-$RegisterLink = "../espaceCo/Register.php";
+$BDDlink='../../../Models/DatabaseModel/connect.php';
+$LoginLink = "../../Views/Pages/Authentication/login.php";
+$RegisterLink = "../../Views/Pages/Authentication/Register.php";
 $IndexLink = "../../../../index.php";
-
-
 
 
 function VerifLogin()

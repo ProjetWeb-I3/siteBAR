@@ -48,14 +48,6 @@ $imageUrl = "Views/img/imageBar/interieur.jpg";
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.    </p>
 </section>
 
-<section>
-    <?php require('Views/Pages/products/produits.php'); ?>
-</section>
-
-
-
-
-
 
 <?php require('Views/Layouts/footer.php'); ?>
 

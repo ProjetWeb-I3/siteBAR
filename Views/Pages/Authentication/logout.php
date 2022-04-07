@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-require('../functionCo/functionLog.php');
+require('../../../Controllers/UserControllers/functionLog.php');
 $Deconnexion = Deconnexion();
 
 ?>

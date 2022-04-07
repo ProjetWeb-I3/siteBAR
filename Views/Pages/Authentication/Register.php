@@ -4,15 +4,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>inscription</title>
-	<link rel="stylesheet" type="text/css" href="IdeaProjects/siteBAR/Views/Pages/Authentication/styleEspaceCo.scss">
+	<link rel="stylesheet" type="text/css" href="../../../Views/CSS-Global/CSS/style.css">
 </head>
 <body>
 
 
-<?php 
+<?php
 
 
-require('../functionCo/functionLog.php');
+require('../../../Controllers/UserControllers/functionLog.php');
 $inscription = register();
 global $IndexLink, $RegisterLink;
 
