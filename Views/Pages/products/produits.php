@@ -4,7 +4,6 @@
 /*require_once '../../../Models/DatabaseModel/connect.php';
 require_once '../../../Controllers/AdminControllers/ProductController/getProduct.php';
 require '../../../Models/ProductsModel/productInfo.php';*/
-global $names, $prices, $images;
 $imageUrlProduits = "../img/";
 $before_image =
     '<div class="box">
@@ -22,7 +21,7 @@ $after_price =
     '<a href="#" class="btnPRODUCT">Ajouter au panier</a>
     </div>';
 $image = '<img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">'; //changer le lien par une variable qui boucle sur la BDD
-$name = '<h3><?php echo $name[0]?>Chouffe</h3>';//changer le nom par une variable qui boucle sur la BDD
+$name = '<h3>Chouffe</h3>';//changer le nom par une variable qui boucle sur la BDD
 $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur la BDD (données à récupérer avec getProduct.php et productInfo.php)
 ?>
 <!--
@@ -44,7 +43,36 @@ $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur l
     <!-- <h1 class="heading"> popular produitBiere </h1> -->
 
     <div class="box-container">
+
         <?php
+        require_once '../../../Models/DatabaseModel/connect.php';
+        require_once '../../../Controllers/AdminControllers/ProductController/getProduct.php';
+        global $conn;
+
+        $req = $conn->query('SELECT * FROM products ');
+        while($article = $req->fetch()){
+            echo $before_image;
+
+            echo '<img src="';
+            echo $article["image_products"];
+            echo '" alt="">';
+
+            echo '<h3>';
+            echo $article["name_products"];
+            echo '</h3>';
+
+            echo $stars;
+
+            echo '<span>';
+            echo $article["price_products"];
+            echo '</span>';
+
+            echo $after_price;
+
+        }
+        ?>
+
+        <?php/*
         for ($i=0; $i<7; $i++) {
             echo $before_image;
             echo $image;
@@ -52,7 +80,7 @@ $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur l
             echo $stars;
             echo $price;
             echo $after_price;
-        }
+        }*/
          ?>
     </div>
 
