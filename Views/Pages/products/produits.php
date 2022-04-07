@@ -60,7 +60,7 @@ $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur l
 
                 echo $stars;
 
-                echo '<span>';
+                echo '<span class="price">';
                 echo $article["price_products"];
                 echo '</span>';
 

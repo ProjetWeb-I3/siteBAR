@@ -1,6 +1,6 @@
-@import "siteBAR/Views/Layouts/footer";
-@import "siteBAR/Views/Layouts/navbar";
-@import "siteBAR/Views/Pages/products/produits";
-@import "siteBAR/index";
-@import "siteBAR/Views/Pages/Authentication/styleEspaceCo";
-@import "siteBAR/Views/Pages/Recommandation/recommandation";
+@import "../../../siteBAR/Views/Layouts/footer.scss";
+@import "../../../siteBAR/Views/Layouts/navbar.scss";
+@import "../../../siteBAR/Views/Pages/products/produits.scss";
+@import "../../../siteBAR/index.scss";
+@import "../../../siteBAR/Views/Pages/Authentication/styleEspaceCo.scss";
+@import "../../../siteBAR/Views/Pages/Recommandation/recommandation.scss";
