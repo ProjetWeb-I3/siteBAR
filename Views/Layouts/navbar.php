@@ -3,6 +3,8 @@
         crossorigin="anonymous"></script>
 
 
+<link rel="stylesheet" type="text/css" href="../../Views/CSS-Global/CSS/style.css">
+
 <script>
     $(function () {
         $(".toggle").on("click", function () {
@@ -27,10 +29,10 @@
             <ul class="menu primary">
                 <li class="logo over"><a class="text-font over" href="#">BAR ICAM TOULOUSE</a></li>
                 <li class="item primary_animation"><a href="#">ACCUEIL</a></li>
-                <li class="item primary_animation"><a href="Sections/Pages/products/produits.php">PRODUITS</a></li>
-                <li class="item primary_animation"><a href="Sections/Pages/Recommandation/Backend/recommandation.php">BONS PLANS</a></li>
-                <li class="item primary_animation"><a href="#">PANIER</a></li>
-                <li class="item primary_animation"><a href="#">CONTACT</a></li>
+                <li class="item primary_animation"><a href="../../Views/Pages/products/produits.php">PRODUITS</a></li>
+                <li class="item primary_animation"><a href="../../Views/Pages/Recommandation/recommandation.php">BONS PLANS</a></li>
+                <li class="item primary_animation"><a href="../../Views/Pages/Cart/cart.php">PANIER</a></li>
+                <li class="item primary_animation"><a href="../../Views/Pages/Contact/contact.php">CONTACT</a></li>
 
 
                 <?php
@@ -48,7 +50,7 @@
                     {
                         ?>
 
-                        <li class="item button "><a class= "text-font over_size-connexion" href="Sections/Pages/Profile/espaceCo/logout.php">Deconnexion</a></li>
+                        <li class="item button "><a class= "text-font over_size-connexion" href="../../Views/Pages/Authentication/logout.php">Deconnexion</a></li>
                         <li class="item button "><a class= "text-font over_size-connexion" href="#">Profil</a></li>
                         <!--                <li class="toggle"><span class="bars"></span></li>-->
 
@@ -61,8 +63,8 @@
                 {
                     ?>
 
-                    <li class="item button "><a class= "text-font over_size-connexion" href="Sections/Pages/Profile/espaceCo/login.php">Connexion</a></li>
-                    <li class="item button "><a class= "text-font over_size-connexion" href="Sections/Pages/Profile/espaceCo/Register.php">Inscription</a></li>
+                    <li class="item button "><a class= "text-font over_size-connexion" href="../../Views/Pages/Authentication/login.php">Connexion</a></li>
+                    <li class="item button "><a class= "text-font over_size-connexion" href="../../Views/Pages/Authentication/Register.php">Inscription</a></li>
                     <li class="toggle"><span class="bars"></span></li>
 
                     <?php

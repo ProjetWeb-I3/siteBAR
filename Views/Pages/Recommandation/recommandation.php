@@ -1,7 +1,7 @@
 <?php
 $imageUrlProduits = "Sections/Pages/products/img/";
 $imageUrlVNB = "../../img/";
-require('../../../Layouts/navbar.php');
+require('../../Layouts/navbar.php');
 
 ?>
 
