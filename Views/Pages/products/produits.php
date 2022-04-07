@@ -2,11 +2,10 @@
 
 <?php 
 $imageUrlProduits = "../img/";
-$before_name =
+$before_image =
     '<div class="box">
             <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">';
+            <a href="#" class="fas fa-eye"></a>';
 $stars =
     '<div class="stars">
                 <i class="fas fa-star"></i>
@@ -18,6 +17,7 @@ $stars =
 $after_price =
     '<a href="#" class="btnPRODUCT">Ajouter au panier</a>
     </div>';
+$image = '<img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">';
 $name = '<h3>Chouffe</h3>';
 $price = '<span>2.5</span>';
 ?>
@@ -42,7 +42,8 @@ $price = '<span>2.5</span>';
     <div class="box-container">
         <?php
         for ($i=0; $i<7; $i++) {
-            echo $before_name;
+            echo $before_image;
+            echo $image;
             echo $name;
             echo $stars;
             echo $price;
