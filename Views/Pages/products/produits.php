@@ -26,7 +26,7 @@ $imageUrlProduits = "Sections/Pages/products/img/";
         <div class="box">
             <a href="#" class="fas fa-heart"></a>
             <a href="#" class="fas fa-eye"></a>
-            <img src="<?php echo $imageUrlProduits?>chouffe.png" alt="">
+            <img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">
             <h3>Chouffe</h3>
             <div class="stars">
                 <i class="fas fa-star"></i>
