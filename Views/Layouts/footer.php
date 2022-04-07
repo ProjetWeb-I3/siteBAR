@@ -24,7 +24,7 @@
                 <h4>Liens Utiles</h4>
                 <ul>
                     <li><a href="#propos">A propos</a></li>
-                    <li><a href="../Pages/products/produits.php">Nos produits</a></li>
+                    <li><a href="../../Views/Pages/products/produits.php">Nos produits</a></li>
                     <li><a href="../Pages/Contact/contact.php">Nous contacter</a></li>
                 </ul>
             </div>
@@ -39,7 +39,7 @@
             <div class="footer-col">
                 <h4>Documentations</h4>
                 <ul >
-                    <li><a href="https://fr-fr.facebook.com/pages/category/Cleaning-Service/SAS-Nettysol-1692848397395910/">Document publicitaire</a></li>
+                    <li><a href="../../Views/Pages/Recommandation/recommandation.php">Nos Bons plans</a></li>
 
                 </ul>
             </div>
