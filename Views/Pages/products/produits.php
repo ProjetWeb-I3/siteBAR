@@ -1,6 +1,10 @@
 <!-- produitBiere section starts  -->
 
-<?php 
+<?php
+/*require_once '../../../Models/DatabaseModel/connect.php';
+require_once '../../../Controllers/AdminControllers/ProductController/getProduct.php';
+require '../../../Models/ProductsModel/productInfo.php';*/
+global $names, $prices, $images;
 $imageUrlProduits = "../img/";
 $before_image =
     '<div class="box">
@@ -17,9 +21,9 @@ $stars =
 $after_price =
     '<a href="#" class="btnPRODUCT">Ajouter au panier</a>
     </div>';
-$image = '<img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">';
-$name = '<h3>Chouffe</h3>';
-$price = '<span>2.5</span>';
+$image = '<img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">'; //changer le lien par une variable qui boucle sur la BDD
+$name = '<h3><?php echo $name[0]?>Chouffe</h3>';//changer le nom par une variable qui boucle sur la BDD
+$price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur la BDD (données à récupérer avec getProduct.php et productInfo.php)
 ?>
 <!--
 <a href='https://ibb.co/9pTFXfM"><img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="chouffe" border="0"></a>
@@ -50,105 +54,6 @@ $price = '<span>2.5</span>';
             echo $after_price;
         }
          ?>
-
-
-        <!--
-                <div class="box">
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                    <img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">
-                    <h3>Chouffe</h3>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span>2.5</span>
-                    <a href="#" class="btnPRODUCT">Ajouter au panier</a>
-                </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="<?php echo $imageUrlProduits?>paixdieu.png" alt="">
-            <h3>Paix Dieu</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-            </div>
-            <span>3€</span>
-            <a href="#" class="btnPRODUCT">Ajouter au panier</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="<?php echo $imageUrlProduits?>triplek.png" alt="">
-            <h3>Triple K</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>3€</span>
-            <a href="#" class="btnPRODUCT">Ajouter au panier</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="<?php echo $imageUrlProduits?>vedett.png" alt="">
-            <h3>Vedett</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>2€</span>
-            <a href="#" class="btnPRODUCT">Ajouter au panier</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="<?php echo $imageUrlProduits?>CT.png" alt="">
-            <h3>Cuvée des trolls</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>2.5€</span>
-            <a href="#" class="btnPRODUCT">Ajouter au panier</a>
-        </div>
-
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="<?php echo $imageUrlProduits?>licorne.png" alt="">
-            <h3>Licorne</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>2.5€</span>
-            <a href="#" class="btnPRODUCT">Ajouter au panier</a>
-        </div>
--->
     </div>
 
 

@@ -19,9 +19,12 @@ function displayProduct($conn){
     $req_names = $conn->query('SELECT name_products FROM products WHERE quantity_products!=0') ;
     $names = $req_names->fetchall();
 
-    $req_prices = $conn->query('SELECT name_prices FROM products WHERE quantity_products!=0') ;
+    $req_prices = $conn->query('SELECT price_products FROM products WHERE quantity_products!=0') ;
     $prices = $req_prices->fetchall();
-    return $names and $prices;
+
+	$req_images = $conn->query('SELECT image_products FROM products WHERE quantity_products!=0') ;
+	$images = $req_images->fetchall();
+    return $names and $prices and $images;
 }
 
 ?>
