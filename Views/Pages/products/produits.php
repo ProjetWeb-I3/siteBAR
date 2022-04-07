@@ -2,9 +2,27 @@
 
 <?php 
 $imageUrlProduits = "../img/";
+$before_name =
+    '<div class="box">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+            <img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">';
+$stars =
+    '<div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+    </div>';
+$after_price =
+    '<a href="#" class="btnPRODUCT">Ajouter au panier</a>
+    </div>';
+$name = '<h3>Chouffe</h3>';
+$price = '<span>2.5</span>';
 ?>
 <!--
-<a href="https://ibb.co/9pTFXfM"><img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="chouffe" border="0"></a>
+<a href='https://ibb.co/9pTFXfM"><img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="chouffe" border="0"></a>
 <a href="https://ibb.co/7CPn4fx"><img src="https://i.ibb.co/c306LBK/CT.png" alt="CT" border="0"></a>
 <a href="https://ibb.co/gmjXwXw"><img src="https://i.ibb.co/WGxdFdF/licorne.png" alt="licorne" border="0"></a>
 <a href="https://ibb.co/HLZMGvQ"><img src="https://i.ibb.co/vC9rL58/paixdieu.png" alt="paixdieu" border="0"></a>
@@ -22,22 +40,33 @@ $imageUrlProduits = "../img/";
     <!-- <h1 class="heading"> popular produitBiere </h1> -->
 
     <div class="box-container">
+        <?php
+        for ($i=0; $i<7; $i++) {
+            echo $before_name;
+            echo $name;
+            echo $stars;
+            echo $price;
+            echo $after_price;
+        }
+         ?>
 
-        <div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>
-            <img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">
-            <h3>Chouffe</h3>
-            <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-            </div>
-            <span>2.5€</span>
-            <a href="#" class="btnPRODUCT">Ajouter au panier</a>
-        </div>
+
+        <!--
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">
+                    <h3>Chouffe</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>2.5</span>
+                    <a href="#" class="btnPRODUCT">Ajouter au panier</a>
+                </div>
 
         <div class="box">
             <a href="#" class="fas fa-heart"></a>
@@ -118,7 +147,7 @@ $imageUrlProduits = "../img/";
             <span>2.5€</span>
             <a href="#" class="btnPRODUCT">Ajouter au panier</a>
         </div>
-
+-->
     </div>
 
 
