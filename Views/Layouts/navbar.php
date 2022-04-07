@@ -3,7 +3,7 @@
         crossorigin="anonymous"></script>
 
 
-<link rel="stylesheet" type="text/css" href="../../Views/CSS-Global/CSS/style.css">
+<link rel="stylesheet" type="text/css" href="/public/CSS-Global/CSS/style.css">
 
 <script>
     $(function () {

@@ -7,7 +7,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ../Views/CSS-Global/styles.scss:../Views/CSS-Global/CSS/style.css"
+    "sass": "sass --watch ../public/CSS-Global/styles.scss:../public/CSS-Global/CSS/style.css"
   },
   "author": "",
   "license": "ISC",

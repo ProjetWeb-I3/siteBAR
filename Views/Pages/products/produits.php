@@ -30,7 +30,7 @@ $price = '<span>2.5</span>';
 <a href="https://ibb.co/Ssvnzz7"><img src="https://i.ibb.co/PmChddz/vedett.png" alt="vedett" border="0"></a>
 -->
 
-<link rel="stylesheet" type="text/css" href="../../CSS-Global/CSS/style.css">
+<link rel="stylesheet" type="text/css" href="/public/CSS-Global/CSS/style.css">
 <!-- <section class="produitBiere" id="produitBiere">
  -->
 <div class="produitBiere">

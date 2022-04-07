@@ -66,7 +66,7 @@ function VerifLogin()
 		}
 		else
 		{
-			$error = "Tous les champs doivent être complété";
+			$error = "Tous les champs doivent être complétés";
 		}	
 
 
