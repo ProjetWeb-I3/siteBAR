@@ -49,7 +49,7 @@ $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur l
         while($article = $req->fetch()){
             if($article['visibility'] == 1){
                 echo $before_image;
-                echo $article['visibility'];
+
                 echo '<img src="';
                 echo $article["image_products"];
                 echo '" alt="">';
