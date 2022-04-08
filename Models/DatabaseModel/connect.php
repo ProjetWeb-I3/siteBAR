@@ -24,6 +24,7 @@
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 echo 'Connexion réussie';
                 echo dirname(__DIR__);
+                echo $GLOBALS['URL'];
 
             }
 
