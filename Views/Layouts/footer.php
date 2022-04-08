@@ -24,7 +24,7 @@
                 <h4>Liens Utiles</h4>
                 <ul>
                     <li><a href="#propos">A propos</a></li>
-                    <li><a href="../../Views/Pages/products/produits.php">Nos produits</a></li>
+                    <li><a href="siteBAR/Views/Pages/products/product.php">Nos produits</a></li>
                     <li><a href="../Pages/Contact/contact.php">Nous contacter</a></li>
                 </ul>
             </div>

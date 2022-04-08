@@ -29,7 +29,7 @@
             <ul class="menu primary">
                 <li class="logo over"><a class="text-font over" href="#">BAR ICAM TOULOUSE</a></li>
                 <li class="item primary_animation"><a href="#">ACCUEIL</a></li>
-                <li class="item primary_animation"><a href="../../Views/Pages/products/produits.php">PRODUITS</a></li>
+                <li class="item primary_animation"><a href="../../Views/Pages/products/product.php">PRODUITS</a></li>
                 <li class="item primary_animation"><a href="../../Views/Pages/Recommandation/recommandation.php">BONS PLANS</a></li>
                 <li class="item primary_animation"><a href="../../Views/Pages/Cart/cart.php">PANIER</a></li>
                 <li class="item primary_animation"><a href="../../Views/Pages/Contact/contact.php">CONTACT</a></li>
