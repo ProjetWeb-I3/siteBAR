@@ -22,7 +22,7 @@ $after_price =
 $image = '<img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">'; //changer le lien par une variable qui boucle sur la BDD
 $name = '<h3>Chouffe</h3>';//changer le nom par une variable qui boucle sur la BDD
 $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur la BDD (données à récupérer avec getProduct.php et productInfo.php)
-
+require('../../Layouts/navbar.php');
 ?>
 <!--
 <a href='https://ibb.co/9pTFXfM"><img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="chouffe" border="0"></a>
@@ -92,6 +92,10 @@ $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur l
 
 
 </div>
+
+<?php
+require('../../Layouts/footer.php');
+?>
 <!-- </section> -->
 
 <!-- produitBiere section ends -->
