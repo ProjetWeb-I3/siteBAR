@@ -9,7 +9,7 @@
 	<title>connexion</title>
     <link rel="stylesheet" type="text/css" href=<?php echo $URL."/public/css/style.css"?>/>
 </head>
-<body>
+<body class="body-espaceco">
 
 
 <?php 
