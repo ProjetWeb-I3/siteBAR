@@ -27,30 +27,31 @@
     <nav>
 
             <ul class="menu primary">
-                <li class="logo over"><a class="text-font over" href="#">BAR ICAM TOULOUSE</a></li>
-                <li class="item primary_animation"><a href="#">ACCUEIL</a></li>
-                <li class="item primary_animation"><a href="../../Views/Pages/products/product.php">PRODUITS</a></li>
-                <li class="item primary_animation"><a href="../../Views/Pages/Recommandation/recommandation.php">BONS PLANS</a></li>
-                <li class="item primary_animation"><a href="../../Views/Pages/Cart/cart.php">PANIER</a></li>
-                <li class="item primary_animation"><a href="../../Views/Pages/Contact/contact.php">CONTACT</a></li>
+                <li class="logo over"><a class="text-font over" href="<?php echo $GLOBALS['URL']."/index.php";?>">BAR ICAM TOULOUSE</a></li>
+                <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/index.php";?>">ACCUEIL</a></li>
+                <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/products/product.php";?>">PRODUITS</a></li>
+                <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Recommandation/recommandation.php";?>">BONS PLANS</a></li>
+                <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Cart/cart.php";?>">PANIER</a></li>
+                <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Contact/contact.php";?>">CONTACT</a></li>
 
 
                 <?php
-                if(isset($_SESSION['id_user']) AND $_GET['id_user']>0)
+                global $conn;
+                if(isset($_SESSION['id_users']) AND $_GET['id_users']>0)
                 {
-                    $getid =$_SESSION['id_user'];
-                    $requser = $conn->prepare('SELECT * FROM Users WHERE id_user = ?');
+                    $getid =$_SESSION['id_users'];
+                    $requser = $conn->prepare('SELECT * FROM users WHERE id_users = ?');
                     $requser->execute(array($getid));
                     $userinfo = $requser->fetch();
                     ?>
 
 
                     <?php
-                    if (isset($_SESSION['id_user']) AND $userinfo['id_user'] == $_SESSION['id_user'])
+                    if (isset($_SESSION['id_users']) AND $userinfo['id_users'] == $_SESSION['id_users'])
                     {
                         ?>
 
-                        <li class="item button "><a class= "text-font over_size-connexion" href="../../Views/Pages/Authentication/logout.php">Deconnexion</a></li>
+                        <li class="item button "><a class= "text-font over_size-connexion" href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/logout.php";?>">Deconnexion</a></li>
                         <li class="item button "><a class= "text-font over_size-connexion" href="#">Profil</a></li>
                         <!--                <li class="toggle"><span class="bars"></span></li>-->
 
@@ -63,8 +64,8 @@
                 {
                     ?>
 
-                    <li class="item button "><a class= "text-font over_size-connexion" href="../../Views/Pages/Authentication/login.php">Connexion</a></li>
-                    <li class="item button "><a class= "text-font over_size-connexion" href="../../Views/Pages/Authentication/Register.php">Inscription</a></li>
+                    <li class="item button "><a class= "text-font over_size-connexion" href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/login.php";?>">Connexion</a></li>
+                    <li class="item button "><a class= "text-font over_size-connexion" href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/Register.php";?>">Inscription</a></li>
                     <li class="toggle"><span class="bars"></span></li>
 
                     <?php

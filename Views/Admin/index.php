@@ -2,7 +2,7 @@
 	
 	session_start(); 
 
-	require_once '../Database/connect.php';
+	require_once '../../Models/DatabaseModel/connect.php';
 
 	if (!$_SESSION['adminBAR']){
 		header('location:login.php');
@@ -30,7 +30,7 @@
 			<a href="index.php" class="logo" >ADMIN</a>
 			<ul>
 				<i class="fas fa-users-cog fa-2x"></i>
-				<li><a href="IdeaProjects/siteBAR/Controllers/UserControllers/logout.php">Deconnexion</a></li>
+				<li><a href="../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
 			</ul>
 </header> 
 

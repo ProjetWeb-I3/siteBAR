@@ -46,7 +46,7 @@ function VerifLogin()
 					$_SESSION['id_users'] = $userinfo['id_users'];
 					$_SESSION['username_users'] = $userinfo['username_users'];
 					$_SESSION['mail_users'] = $userinfo['mail_users'];
-					header("Location: ../../../../index.php?id_user=".$_SESSION['id_users']);
+					header("Location: ../../../index.php?id_users=".$_SESSION['id_users']);
 					$requser->closeCursor();
 
 
@@ -205,7 +205,7 @@ function Deconnexion()
     $_SESSION = array();//Ecrase tableau de session
     session_unset(); //Detruit toutes les variables de la session en cours
     session_destroy();//Destruit la session en cours
-    header("location: ../../../../index.php"); // redirige l'utilisateur
+    header("location: ../../../index.php"); // redirige l'utilisateur
 
 
 }

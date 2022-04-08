@@ -15,11 +15,12 @@
 
 <?php 
 	
-	session_start(); 
+	session_start();
 
-	require_once '../../config/connect.php'; 
 
-	if (!$_SESSION['aadmin']){
+    require_once '../../../Models/DatabaseModel/connect.php';
+
+	if (!$_SESSION['adminBAR']){
 		header('location:../login.php');
 		}
 ?>
@@ -33,7 +34,7 @@
 			<a href="../index.php" class="logo" >ADMIN</a>
 			<ul>
 				<i class="fas fa-users-cog fa-2x"></i>
-				<li><a href="IdeaProjects/siteBAR/Controllers/UserControllers/logout.php">Deconnexion</a></li>
+				<li><a href="../../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
 <!-- class="active" onclick="toggle()"-->
 				
 			</ul>
@@ -76,6 +77,7 @@
 					<thead>
 						<th>id</th>
 						<th>Pseudo</th>
+                        <th>Rank</th>
 						<th>Mail</th>
 						<th colspan="3">Action</th>
 					</thead>
@@ -84,9 +86,10 @@
 
 
 
-					<?php 
-						require_once '../../config/connect.php';
-						$req = $conn->query('SELECT * FROM membres');
+					<?php
+                        global $conn;
+						require_once '../../../Models/DatabaseModel/connect.php';
+						$req = $conn->query('SELECT * FROM users');
 
 						$membre = $req->fetchALL();
 
@@ -94,20 +97,22 @@
 
 
 							<tr>
-								<td><?= $membres['id'] ?> </td>
+								<td><?= $membres['id_users'] ?> </td>
 								
-								<td><?= $membres['pseudo'] ?> </td>
+								<td><?= $membres['lastname_users'] ?> </td>
 
-								<td><?= $membres['mail'] ?> </td>
+                                <td><?= $membres['rank_users'] ?> </td>
+
+								<td><?= $membres['mail_users'] ?> </td>
 
 
 								<td>
 
 
-									<a href="modifierMembre.php?id=<?= $membres['id'] ?>" class="modifier">Modifier</a>
+									<a href="modifierMembre.php?id=<?= $membres['id_users'] ?>" class="modifier">Modifier</a>
 
 
-									<a href="IdeaProjects/siteBAR/Controllers/AdminControllers/UserControllers/deleteUser.php?id=<?= $membres['id'] ?>" class="supprimer">Supprimer</a>
+									<a href="IdeaProjects/siteBAR/Controllers/AdminControllers/UserControllers/deleteUser.php?id=<?= $membres['id_users'] ?>" class="supprimer">Supprimer</a>
 
 
 									<!-- <a href="#" class="publier">publier</a> -->

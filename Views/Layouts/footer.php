@@ -40,6 +40,7 @@
                 <h4>Documentations</h4>
                 <ul >
                     <li><a href="../../Views/Pages/Recommandation/recommandation.php">Nos Bons plans</a></li>
+                    <li><a href="../../Views/Admin">Admin</a></li>
 
                 </ul>
             </div>
