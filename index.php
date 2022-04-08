@@ -20,7 +20,7 @@ require('Models/DatabaseModel/connect.php');
 require('Views/Layouts/navbar.php');
 
 ?>
-
+<link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
 <!-- section1 presentation -->
 
 <section class="banner" id="home" style="background-image: url(<?php print "Views/img/imageBar/interieur.jpg" ?>);">
