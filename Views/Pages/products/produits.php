@@ -2,6 +2,8 @@
 
 <?php
 
+require_once('../../../config.php');
+
 $before_image =
     '<div class="box">
             <a href="#" class="fas fa-heart"></a>
@@ -43,6 +45,7 @@ $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur l
     <div class="box-container">
 
         <?php
+
         require_once '../../../Models/DatabaseModel/connect.php';
         require_once '../../../Controllers/AdminControllers/ProductController/getProduct.php';
         global $conn;
@@ -82,6 +85,8 @@ $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur l
             echo $price;
             echo $after_price;
         }*/
+
+
          ?>
     </div>
 

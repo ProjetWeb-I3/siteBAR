@@ -1,10 +1,13 @@
+<?php require_once('../../../config.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>connexion</title>
-	<link rel="stylesheet" type="text/css" href="siteBAR/public/CSS-Global/CSS/style.css">
+    <link rel="stylesheet" type="text/css" href=<?php echo $URL."/public/css/style.css"?>/>
 </head>
 <body>
 

@@ -13,7 +13,7 @@
 
 session_start();
 
-$GLOBALS['URL'] = 'http://localhost:63342/siteBAR';
+require_once('config.php');
 
 require('Models/DatabaseModel/connect.php');
 

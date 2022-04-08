@@ -1,9 +1,12 @@
 
 
 <?php
+require_once('../../../config.php');
 require('../../Layouts/navbar.php');
 
 ?>
+
+<link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
 <div>
     <h1> Nos bons plans ! </h1>
 
