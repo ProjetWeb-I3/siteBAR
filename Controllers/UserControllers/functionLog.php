@@ -112,14 +112,17 @@ function Register()
                 $reqpseudo = $conn->prepare('SELECT * FROM users WHERE username_users = ?');
                 $reqpseudo->execute(array($username));
                 $pseudoexist = $reqpseudo->rowCount();
-                echo $pseudoexist;
-
+//                echo $pseudoexist;
+                echo $mail;
+                echo $mail2;
                 if ($pseudoexist == 0)
                 {
-                    if ($mail == $mail2)
+                    if ($mail = $mail2)
                     {
+                        echo 'ok';
                         if(filter_var($mail, FILTER_VALIDATE_EMAIL))
                         {
+                            echo 'okvalide';
 
                             $reqmail= $conn->prepare('SELECT * FROM users WHERE mail_users = ?');
                             $reqmail->execute(array($mail));
@@ -128,6 +131,7 @@ function Register()
 
                             if ($mailexist == 0 )
                             {
+                                echo 'ok';
                                 if ( $password == $password2)
                                 {
                                     $saltMDP= '$6$rounds=5000$baricamstarbarstoulouse$';
@@ -165,7 +169,7 @@ function Register()
                     }
                     else
                     {
-                        $error = "Adresse mail déjà utilisée !";
+                        $error = "Adresse mail differentes !";
                     }
 
 
