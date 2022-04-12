@@ -8,10 +8,10 @@ session_start();
 
 global $LoginLink, $RegisterLink, $BDDlink, $IndexLink, $conn;
 
-$BDDlink='../../../Models/DatabaseModel/connect.php';
-$LoginLink = "../../Views/Pages/Authentication/login.php";
-$RegisterLink = "../../Views/Pages/Authentication/Register.php";
-$IndexLink = "../../../../index.php";
+$BDDlink=$GLOBALS['URL'].'/Models/DatabaseModel/connect.php';
+$LoginLink = $GLOBALS['URL']."/Views/Pages/Authentication/login.php";
+$RegisterLink =$GLOBALS['URL']."/Views/Pages/Authentication/Register.php";
+$IndexLink = $GLOBALS['URL']."/index.php";
 
 
 function VerifLogin()
@@ -46,7 +46,7 @@ function VerifLogin()
 					$_SESSION['id_users'] = $userinfo['id_users'];
 					$_SESSION['username_users'] = $userinfo['username_users'];
 					$_SESSION['mail_users'] = $userinfo['mail_users'];
-					header("Location: ../../../index.php?id_users=".$_SESSION['id_users']);
+					header("Location: ".$GLOBALS['URL']."/index.php?id_users=".$_SESSION['id_users']);
 					$requser->closeCursor();
 
 
