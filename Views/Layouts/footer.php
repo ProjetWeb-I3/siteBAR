@@ -66,7 +66,7 @@
 </footer>
 
 
-
+.
 
 <!-- le copyright du site -->
 <div class="copyright">
