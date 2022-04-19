@@ -23,7 +23,7 @@ global $IndexLink, $RegisterLink;
 ?>
 
 <div class="center">
-	
+
 
 	<h1>Inscription</h1>
 
@@ -36,12 +36,12 @@ global $IndexLink, $RegisterLink;
 				<span></span>
 				<label for="username">Pseudo</label>
 			</div>
-				
+
 			<div class="txt_field">
 				<input type="text" id="familyname" required name="familyname" value="<?php if(isset($familyname)) { echo $familyname; }?>">
 				<span></span>
 				<label for="familyname">Nom</label>
-			</div>			
+			</div>
 
 			<div class="txt_field">
 				<input type="text" id="firstname"  required name="firstname" value="<?php if(isset($firstname)) { echo $firstname; }?>">
@@ -61,17 +61,17 @@ global $IndexLink, $RegisterLink;
 				<input type="email" id="mail2"  required name="mail2" value="<?php if(isset($mail2)) { echo $mail2; }?>">
 				<span></span>
 				<label for="mail2">Confirmation mail</label>
-			</div> 
+			</div>
 
 
 
 
 
 			<div >
-				
-			
+
+
 				<select id="promotion" required name="promotion">
-		   
+
 				<?php
 						for ($i=0; $i<7; $i++) {
 				?>
@@ -90,11 +90,11 @@ global $IndexLink, $RegisterLink;
 						}
 				?>
 
-				   					
+
 				</select>
 				<label for="promotion">Promotion</label>
-		
-				
+
+
 			</div>
 
 
@@ -154,7 +154,7 @@ global $IndexLink, $RegisterLink;
 
 		</form>
 
-	
+
 
 
 

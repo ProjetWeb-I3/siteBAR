@@ -8,27 +8,27 @@ session_start();
 
 global $LoginLink, $RegisterLink, $BDDlink, $IndexLink, $conn;
 
-$BDDlink=$GLOBALS['URL'].'/Models/DatabaseModel/connect.php';
-$LoginLink = $GLOBALS['URL']."/Views/Pages/Authentication/login.php";
-$RegisterLink =$GLOBALS['URL']."/Views/Pages/Authentication/Register.php";
-$IndexLink = $GLOBALS['URL']."/index.php";
+$BDDlink=$_SERVER['DOCUMENT_ROOT'].'/Models/DatabaseModel/connect.php';
+$LoginLink = $_SERVER['DOCUMENT_ROOT']."/Views/Pages/Authentication/login.php";
+$RegisterLink =$_SERVER['DOCUMENT_ROOT']."/Views/Pages/Authentication/Register.php";
+$IndexLink = $_SERVER['DOCUMENT_ROOT']."/index.php";
 
 
 function VerifLogin()
 {
 
-	
+
 	global $error, $BDDlink, $conn;
 	require($BDDlink);
-	
-	if (isset($_POST['formconnexion'])) 
+
+	if (isset($_POST['formconnexion']))
 	{
 		$mailconnect = htmlspecialchars($_POST['mailconnect']);
 		$mdpconnect = $_POST['mdpconnect'];
 
 		if(!empty($mailconnect) AND !empty($mdpconnect))
 		{
-			
+
 			$requser = $conn->prepare('SELECT * FROM users WHERE mail_users =?');
 			$requser->execute(array($mailconnect));
 			$userexist = $requser->rowCount();
@@ -36,13 +36,13 @@ function VerifLogin()
 			$userinfo = $requser->fetch();
 			$passwordVerif = $userinfo['password_users'];
 
-		
+
 			if($userexist == 1 )
 			{
-				
+
 				if (hash_equals($passwordVerif, crypt($mdpconnect, $passwordVerif)))
 				{
-						
+
 					$_SESSION['id_users'] = $userinfo['id_users'];
 					$_SESSION['username_users'] = $userinfo['username_users'];
 					$_SESSION['mail_users'] = $userinfo['mail_users'];
@@ -50,7 +50,7 @@ function VerifLogin()
 					$requser->closeCursor();
 
 
-				}		
+				}
 				else
 				{
 					$error ="Mauvais Mail ou Mot de passe !";
@@ -67,7 +67,7 @@ function VerifLogin()
 		else
 		{
 			$error = "Tous les champs doivent être complétés";
-		}	
+		}
 
 
 	}
@@ -75,7 +75,7 @@ function VerifLogin()
 
 
 
-	
+
 }
 
 
