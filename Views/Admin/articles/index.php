@@ -1,10 +1,11 @@
 <?php 
 	
-	session_start(); 
+	session_start();
 
-	require_once '../../config/connect.php'; 
+    require_once '../../../Models/DatabaseModel/connect.php';
 
-	if (!$_SESSION['aadmin']){
+
+	if (!$_SESSION['adminBAR']){
 		header('location:../login.php');
 		}
 ?>
@@ -27,7 +28,7 @@
 			<a href="../index.php" class="logo" >ADMIN</a>
 			<ul>
 				<i class="fas fa-users-cog fa-2x"></i>
-				<li><a href="IdeaProjects/siteBAR/Controllers/UserControllers/logout.php">Deconnexion</a></li>
+				<li><a href="../../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
 <!-- class="active" onclick="toggle()"-->
 				
 			</ul>
@@ -70,23 +71,26 @@
 
 					<tbody>
 
-					<?php 
-						require_once '../../config/connect.php';
-						$req = $conn->query('SELECT * FROM articles');
+					<?php
+                        global $conn;
+						require_once '../../../Models/DatabaseModel/connect.php';
+						$req = $conn->query('SELECT * FROM products');
 
-						$article = $req->fetchALL();
+						$product = $req->fetchALL();
 
-						foreach ($article as $articles): ?>
+
+
+                    foreach ($product as $products): ?>
 
 
 							<tr>
-								<td><?= $articles['id'] ?> </td>
+								<td><?= $products['id_products'] ?> </td>
 								
-								<td><?= $articles['title'] ?> : <?php
+								<td><?= $products['name_products'] ?> : <?php
 
 						              
 
-						              	$comment = $articles['content'];
+						              	$comment = $products['content_products'];
 
 										if (strlen($comment)>100) 
 											{
@@ -107,10 +111,10 @@
 								<td>
 
 
-									<a href="../fonctionAdminArticle/modifyArticle.php?id=<?= $articles['id'] ?>" class="modifier">Modifier</a>
+									<a href="../fonctionAdminArticle/modifyArticle.php?id=<?= $products['id_products'] ?>" class="modifier">Modifier</a>
 
 
-									<a href="IdeaProjects/siteBAR/Controllers/AdminControllers/ProductController/deleteProduct.php?id=<?= $articles['id'] ?>" class="supprimer">Supprimer</a>
+									<a href="IdeaProjects/siteBAR/Controllers/AdminControllers/ProductController/deleteProduct.php?id=<?= $products['id_products'] ?>" class="supprimer">Supprimer</a>
 
 
 									<a href="#" class="publier">publier</a>

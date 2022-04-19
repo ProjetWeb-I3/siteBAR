@@ -42,7 +42,7 @@ global $IndexLink, $RegisterLink;
 
 
 				<div class="pass">
-					<a href="#">Mot de passe oublié ?</a>
+					<a href="PasswordRecover/forgotPassword.php">Mot de passe oublié ?</a>
 				</div>
 
 

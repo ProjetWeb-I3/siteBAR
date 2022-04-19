@@ -36,17 +36,18 @@
 
 
                 <?php
-                if(isset($_SESSION['id_user']) AND $_GET['id_user']>0)
+                global $conn;
+                if(isset($_SESSION['id_users']) AND $_GET['id_users']>0)
                 {
-                    $getid =$_SESSION['id_user'];
-                    $requser = $conn->prepare('SELECT * FROM Users WHERE id_user = ?');
+                    $getid =$_SESSION['id_users'];
+                    $requser = $conn->prepare('SELECT * FROM users WHERE id_users = ?');
                     $requser->execute(array($getid));
                     $userinfo = $requser->fetch();
                     ?>
 
 
                     <?php
-                    if (isset($_SESSION['id_user']) AND $userinfo['id_user'] == $_SESSION['id_user'])
+                    if (isset($_SESSION['id_users']) AND $userinfo['id_users'] == $_SESSION['id_users'])
                     {
                         ?>
 

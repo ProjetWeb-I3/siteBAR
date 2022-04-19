@@ -8,10 +8,10 @@ session_start();
 
 global $LoginLink, $RegisterLink, $BDDlink, $IndexLink, $conn;
 
-$BDDlink='../../../Models/DatabaseModel/connect.php';
-$LoginLink = "../../Views/Pages/Authentication/login.php";
-$RegisterLink = "../../Views/Pages/Authentication/Register.php";
-$IndexLink = "../../../../index.php";
+$BDDlink=$GLOBALS['URL'].'/Models/DatabaseModel/connect.php';
+$LoginLink = $GLOBALS['URL']."/Views/Pages/Authentication/login.php";
+$RegisterLink =$GLOBALS['URL']."/Views/Pages/Authentication/Register.php";
+$IndexLink = $GLOBALS['URL']."/index.php";
 
 
 function VerifLogin()
@@ -46,7 +46,7 @@ function VerifLogin()
 					$_SESSION['id_users'] = $userinfo['id_users'];
 					$_SESSION['username_users'] = $userinfo['username_users'];
 					$_SESSION['mail_users'] = $userinfo['mail_users'];
-					header("Location: ../../../../index.php?id_user=".$_SESSION['id_users']);
+					header("Location: ".$GLOBALS['URL']."/index.php?id_users=".$_SESSION['id_users']);
 					$requser->closeCursor();
 
 
@@ -112,14 +112,17 @@ function Register()
                 $reqpseudo = $conn->prepare('SELECT * FROM users WHERE username_users = ?');
                 $reqpseudo->execute(array($username));
                 $pseudoexist = $reqpseudo->rowCount();
-                echo $pseudoexist;
-
+//                echo $pseudoexist;
+                echo $mail;
+                echo $mail2;
                 if ($pseudoexist == 0)
                 {
-                    if ($mail == $mail2)
+                    if ($mail = $mail2)
                     {
+                        echo 'ok';
                         if(filter_var($mail, FILTER_VALIDATE_EMAIL))
                         {
+                            echo 'okvalide';
 
                             $reqmail= $conn->prepare('SELECT * FROM users WHERE mail_users = ?');
                             $reqmail->execute(array($mail));
@@ -128,6 +131,7 @@ function Register()
 
                             if ($mailexist == 0 )
                             {
+                                echo 'ok';
                                 if ( $password == $password2)
                                 {
                                     $saltMDP= '$6$rounds=5000$baricamstarbarstoulouse$';
@@ -165,7 +169,7 @@ function Register()
                     }
                     else
                     {
-                        $error = "Adresse mail déjà utilisée !";
+                        $error = "Adresse mail differentes !";
                     }
 
 
@@ -205,7 +209,7 @@ function Deconnexion()
     $_SESSION = array();//Ecrase tableau de session
     session_unset(); //Detruit toutes les variables de la session en cours
     session_destroy();//Destruit la session en cours
-    header("location: ../../../../index.php"); // redirige l'utilisateur
+    header("location: ../../../index.php"); // redirige l'utilisateur
 
 
 }

@@ -14,7 +14,7 @@
 <?php
 
 
-    require('../Database/connect.php');
+    require('../../Models/DatabaseModel/connect.php');
     global $conn;
 	if (isset($_POST) AND !empty($_POST)) {
 
@@ -35,20 +35,22 @@
             $passwordAdminVerif = $userinfoAdmin['password_users'];
             $rankAdmin = $userinfoAdmin['rank_users'];
             echo $rankAdmin;
+            echo $userAdmin;
 
 
 			if ($userAdmin == 1) {
 
+
                 if (hash_equals($passwordAdminVerif, crypt($passwordAdmin, $passwordAdminVerif)))
                 {
-                    if($rankAdmin = 'ADMIN')
+                    if($rankAdmin == 'ADMIN')
                     {
                         $_SESSION['adminBAR'] = $_POST['mailAdmin'];
                         header('location:index.php');
                     }
                     else
                     {
-                        $error = "Vous ete pas membre ";
+                        $error = "Vous êtes pas ADMIN ";
                     }
 
                 }
@@ -90,6 +92,13 @@
 	        
 	    </div>
 		<button class="btn">Se connecter</button>
+        <?php
+
+        if (isset($error)) {
+        echo '<div style="color:red ; text-align:center"  class="error">'. $error .'</div>';
+        }
+
+        ?>
         
 
     </form>
