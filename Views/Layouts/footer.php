@@ -24,8 +24,8 @@
                 <h4>Liens Utiles</h4>
                 <ul>
                     <li><a href="#propos">A propos</a></li>
-                    <li><a href="siteBAR/Views/Pages/products/product.php">Nos produits</a></li>
-                    <li><a href="../Pages/Contact/contact.php">Nous contacter</a></li>
+                    <li><a href="<?php echo $GLOBALS['URL']."/Views/Pages/products/product.php";?>">Nos produits</a></li>
+                    <li><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Contact/contact.php";?>">Nous contacter</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -39,7 +39,7 @@
             <div class="footer-col">
                 <h4>Documentations</h4>
                 <ul >
-                    <li><a href="../../Views/Pages/Recommandation/recommandation.php">Nos Bons plans</a></li>
+                    <li><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Recommandation/recommandation.php";?>">Nos Bons plans</a></li>
 
                 </ul>
             </div>
