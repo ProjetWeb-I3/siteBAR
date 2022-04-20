@@ -1,8 +1,10 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*pour la baniere de presentation */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -809,6 +811,127 @@ input[type=submit]:hover {
 
   .center h1 {
     font-size: 40px;
+  }
+}
+.html {
+  font-size: 100%;
+  overflow-x: visible;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+
+.label {
+  font-size: 15px;
+}
+
+.body-contact {
+  margin: 0px;
+  padding: 0px;
+  background-color: #adadad;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+form {
+  padding: 80px;
+  background-color: white;
+  border-radius: 10px;
+  border-bottom: 2px solid #adadad;
+  border-top: 2px solid #adadad;
+  border-left: 2px solid #adadad;
+  border-right: 2px solid #adadad;
+}
+
+form h1 {
+  font-size: 20px;
+}
+
+form .separation {
+  width: 100%;
+  height: 1px;
+  background-color: yellow;
+}
+
+form .corps-formulaire {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+form .corps-formulaire .groupe {
+  position: relative;
+  /* Pour mettre positionner l’élément dans le flux normal de la page */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+form .corps-formulaire .gauche .groupe input {
+  margin-top: 5px;
+  padding: 10px 5px 10px 30px;
+  border: 1px solid #c9c9c9;
+  outline-color: yellow;
+  border-radius: 5px;
+}
+
+form .corps-formulaire .gauche .groupe i {
+  position: absolute;
+  /* positionné par rapport à son parent le plus proche positionné */
+  left: 0;
+  top: 25px;
+  padding: 9px 8px;
+  color: yellow;
+}
+
+form .corps-formulaire .droite {
+  margin-left: 40px;
+}
+
+form .corps-formulaire .droite .groupe {
+  height: 100%;
+  width: 100%;
+}
+
+form .corps-formulaire .droite .groupe textarea {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid yellow;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  height: 72%;
+  text-transform: none;
+}
+
+form .pied-formulaire button {
+  margin-top: 10px;
+  background-color: yellow;
+  color: black;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+form .pied-formulaire button:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 920px) {
+  form .corps-formulaire .droite {
+    margin-left: 0px;
+  }
+
+  form .corps-formulaire .droite {
+    width: 115%;
   }
 }
 
