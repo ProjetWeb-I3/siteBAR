@@ -31,7 +31,7 @@ require('../../Layouts/navbar.php');
 
         <div class="padding">
             <div class="box-container2 flex-direction-row">
-                <img class="resize-img box1" src="https://www.3brasseurs.com/medias/images/upload/plats/plat_5.jpg"
+                <img class="resize-img-secondary box1" src="https://www.3brasseurs.com/medias/images/upload/plats/plat_5.jpg"
                      alt=" ">
                 <p class="p box2">Dans un tout autre style, les 3 Brasseurs de Labège proposent le charme d'un bistrot
                     couplé à de délicieuses bières artisanales de la région. A essayer immédiatement !</p>

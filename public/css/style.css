@@ -863,8 +863,11 @@ input[type=submit]:hover {
 }
 
 .resize-img {
+  max-width: 100%;
+  height: auto;
+}
+.resize-img-secondary {
   max-width: 20%;
-  min-width: 200px;
   height: auto;
 }
 
@@ -886,9 +889,13 @@ input[type=submit]:hover {
   }
 
   .resize-img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     align-items: center;
+  }
+  .resize-img-secondary {
+    max-width: 40%;
+    height: auto;
   }
 
   .h2 {
