@@ -12,8 +12,11 @@ require('../../Layouts/navbar.php');
 
         <div class="padding">
             <div class="box-container2 flex-direction-row">
-                <img class="resize-img box1" src="https://vandb.fr/Assets/166069/Theme/Project/Vandb/img/logo-share.png"
-                     alt=" ">
+                <div class="test">
+                    <img class="resize-img box1 block-img"
+                         src="https://vandb.fr/Assets/166069/Theme/Project/Vandb/img/logo-share.png"
+                         alt=" ">
+                </div>
                 <p class="p box2">La boutique V&B de purpan est l'un de nos meilleurs bons plans, située tout près de
                     l'ICAM, certains la
                     reconnaîtront sûrement. De nombreuses bières y sont proposées dans un cadre chaleureux et bon
