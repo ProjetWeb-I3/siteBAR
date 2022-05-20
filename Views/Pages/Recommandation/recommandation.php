@@ -1,29 +1,40 @@
-
-
 <?php
 require_once('../../../config.php');
 require('../../Layouts/navbar.php');
 
 ?>
-
-<link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
 <div>
-    <h1> Nos bons plans ! </h1>
+    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
+    <div>
+        <h1 class="padding-top h1 "> Nos bons plans ! </h1>
 
-    <div><p> Venez dès à présent visiter les lieux que nous avons aimés !</p>
+        <p class="p h2 "> Venez dès à présent visiter les lieux que nous avons sélectionnés pour vous !</p>
 
-        <img src="https://vandb.fr/Assets/166069/Theme/Project/Vandb/img/logo-share.png" alt=" ">
-        <p>La boutique V&B de purpan est l'un de nos meilleurs bons plans, située tout près de l'ICAM, certains la
-            reconnaîtront sûrement. De nombreuses bières y sont proposées dans un cadre chaleureux et bon enfant.
-            De plus, il proposent également certains des meilleurs vins du sud-ouest pour le plaisir de vos papilles !
-            En tout cas nous on adore !</p>
-        <img src="https://www.3brasseurs.com/medias/images/upload/plats/plat_5.jpg" alt=" ">
-        <p>Dans un tout autre style, les 3 Brasseurs de Labège proposent le charme d'un bistrot couplé à de délicieuses
-            bières.
-            Le choix est large et la qualité de la bière comme de la nourriture sont toujours au rendez-vous.
-            On vous recommande fortement d'aller tester tout ça !</p>
+        <div class="padding">
+            <div class="box-container2 flex-direction-row">
+                <img class="resize-img box1" src="https://vandb.fr/Assets/166069/Theme/Project/Vandb/img/logo-share.png"
+                     alt=" ">
+                <p class="p box2">La boutique V&B de purpan est l'un de nos meilleurs bons plans, située tout près de
+                    l'ICAM, certains la
+                    reconnaîtront sûrement. De nombreuses bières y sont proposées dans un cadre chaleureux et bon
+                    enfant.
+                    De plus, il proposent également certains des meilleurs vins du sud-ouest pour le plaisir de vos
+                    papilles
+                    !
+                    En tout cas nous on adore !</p>
 
+            </div>
+        </div>
+
+        <div class="padding">
+            <div class="box-container2 flex-direction-row">
+                <img class="resize-img box1" src="https://www.3brasseurs.com/medias/images/upload/plats/plat_5.jpg"
+                     alt=" ">
+                <p class="p box2">Dans un tout autre style, les 3 Brasseurs de Labège proposent le charme d'un bistrot
+                    couplé à de délicieuses bières artisanales de la région. A essayer immédiatement !</p>
+
+
+            </div>
+        </div>
     </div>
-</div>
-<?php require('../../Layouts/footer.php'); ?>
-
+    <?php require('../../Layouts/footer.php'); ?>

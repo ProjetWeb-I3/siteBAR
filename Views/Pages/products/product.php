@@ -24,18 +24,18 @@ $name = '<h3>Chouffe</h3>';//changer le nom par une variable qui boucle sur la B
 $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur la BDD (données à récupérer avec getProduct.php et productInfo.php)
 require('../../Layouts/navbar.php');
 ?>
-<!--
-<a href='https://ibb.co/9pTFXfM"><img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="chouffe" border="0"></a>
-<a href="https://ibb.co/7CPn4fx"><img src="https://i.ibb.co/c306LBK/CT.png" alt="CT" border="0"></a>
-<a href="https://ibb.co/gmjXwXw"><img src="https://i.ibb.co/WGxdFdF/licorne.png" alt="licorne" border="0"></a>
-<a href="https://ibb.co/HLZMGvQ"><img src="https://i.ibb.co/vC9rL58/paixdieu.png" alt="paixdieu" border="0"></a>
-<a href="https://ibb.co/QFn8Dfc"><img src="https://i.ibb.co/5WvYK69/triplek.png" alt="triplek" border="0"></a>
-<a href="https://ibb.co/Ssvnzz7"><img src="https://i.ibb.co/PmChddz/vedett.png" alt="vedett" border="0"></a>
--->
+
+<!--<a href="https://ibb.co/9pTFXfM"><img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="chouffe" border="0"></a>-->
+<!--<a href="https://ibb.co/7CPn4fx"><img src="https://i.ibb.co/c306LBK/CT.png" alt="CT" border="0"></a>-->
+<!--<a href="https://ibb.co/gmjXwXw"><img src="https://i.ibb.co/WGxdFdF/licorne.png" alt="licorne" border="0"></a>-->
+<!--<a href="https://ibb.co/HLZMGvQ"><img src="https://i.ibb.co/vC9rL58/paixdieu.png" alt="paixdieu" border="0"></a>-->
+<!--<a href="https://ibb.co/QFn8Dfc"><img src="https://i.ibb.co/5WvYK69/triplek.png" alt="triplek" border="0"></a>-->
+<!--<a href="https://ibb.co/Ssvnzz7"><img src="https://i.ibb.co/PmChddz/vedett.png" alt="vedett" border="0"></a>-->
+
 
 <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
-<!-- <section class="produitBiere" id="produitBiere">
- -->
+<!--<section class="produitBiere" id="produitBiere">-->
+
 <div class="produitBiere">
 
 
