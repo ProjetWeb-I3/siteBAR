@@ -26,7 +26,7 @@ global $IndexLink, $RegisterLink;
 
 
 	<h1>Inscription</h1>
-r
+
 
 		<form method="POST" action="">
 
