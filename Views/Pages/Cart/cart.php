@@ -19,12 +19,14 @@ require('../../Layouts/navbar.php');
 
 
 <?php
-session_start();
+
 //require_once '../../../Models/DatabaseModel/connect.php';
 global $conn;
 $user = $_SESSION['id_users'];
 //echo $user;
-$req = $conn->query("SELECT * FROM carts WHERE id_users = '$user'");
+//$req = $conn->query("SELECT * FROM carts WHERE id_users = '$user'");
+$req = $conn->prepare("SELECT id_carts , quantity_carts ,carts.id_products , name_products, image_products FROM carts LEFT JOIN products  ON carts.id_products = products.id_products  WHERE carts.id_users   = ?  ");
+$req->execute(array($user));
 $productExist = $req->rowCount();
 $produitCart = $req->fetchALL();
 
@@ -37,7 +39,8 @@ else
     <div class ="cart-container">
 <?php    foreach ($produitCart as $produitsCart): ?>
         <div class="product-card">
-            <h2>Produit : <?= $produitsCart['id_products'] ?></h2>
+            <img src="../../Admin/ProductManager/imgProductsBar/<?=$produitsCart['image_products'] ?>" alt="">
+            <h2>Produit : <?= $produitsCart['name_products'] ?></h2>
             <h2>Quantité : <?= $produitsCart['quantity_carts'] ?></h2>
             <div class="modify-quantity">
                 <a href="functionMoreLess.php?MoreLess=0&amp;ref=<?= $produitsCart['id_products'] ?>">-</a>
