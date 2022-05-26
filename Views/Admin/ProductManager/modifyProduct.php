@@ -68,19 +68,18 @@ if (!$_SESSION['adminBAR']) {
             if (!empty($_POST['title']) and !empty($_POST['content'])) {
 
 
-                $req = $conn->prepare('UPDATE articles SET title = :title, content = :content, auteur = :auteur WHERE id = :id');
+                $req = $conn->prepare('UPDATE products SET name_products = :title, content_products = :content, WHERE id_products = :id');
                 $req->execute([
 
 
                     'title' => $_POST['title'],
                     'content' => $_POST['content'],
-                    'auteur' => $_POST['auteur'],
                     'id' => $_GET['id'],
 
 
                 ]);
                 $_SESSION['flash']['success'] = 'Article modifié';
-                header('location:../articles/index.php');
+                header('location: /siteBAR/Views/Admin/ProductManager/index.php');
 
             } else {
                 $_SESSION['flash']['error'] = 'champs manquants';

@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>ADMIN | Membres</title>
-
-    <link rel="stylesheet" type="text/css" href="siteBAR/Views/Admin/style/admin.scss">
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-</head>
-
-
 <?php
 
 session_start();
@@ -22,6 +9,14 @@ if (!$_SESSION['adminBAR']) {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN | Membres</title>
+    <link rel="stylesheet" type="text/css" href="siteBAR/Views/Admin/style/admin.scss">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
 
 <body class="admin-body">
 
@@ -43,7 +38,6 @@ if (!$_SESSION['adminBAR']) {
             <li><a href="index.php">Membres</a></li>
             <li><a href="#">Mails</a></li>
         </ul>
-
     </div>
 
 

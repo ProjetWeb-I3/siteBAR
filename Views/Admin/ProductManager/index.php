@@ -11,11 +11,11 @@ if (!$_SESSION['adminBAR']) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN | Articles</title>
-    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
+    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body class="admin-body product-manager">
@@ -23,8 +23,9 @@ if (!$_SESSION['adminBAR']) {
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 ?>
-<div class="admin-flex">
- <!-- barre de gauche -->
+
+<div class="admin-wrapper">
+    <!-- barre de gauche -->
     <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
     ?>
@@ -82,7 +83,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
                             <a href="../fonctionAdminArticle/modifyProduct.php?id=<?= $products['id_products'] ?>"
                                class="modifier">Modifier</a>
 
-                            <a href="/siteBAR/Controllers/AdminControllers/ProductController/deleteProduct.php?id=<?= $products['id_products'] ?>" class="supprimer">Supprimer</a>
+                            <a href="/siteBAR/Controllers/AdminControllers/ProductController/deleteProduct.php?id=<?= $products['id_products'] ?>"
+                               class="supprimer">Supprimer</a>
 
                             <a href="#" class="publier">publier</a>
                         </td>
