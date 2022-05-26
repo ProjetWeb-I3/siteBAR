@@ -40,13 +40,11 @@ if (!$_SESSION['adminBAR']) {
     <!-- barre de gauche -->
     <div class="barre-gauche">
         <ul>
-            <li><a href="../ProductManager/index.php">Articles</a></li>
-            <li><a href="index.php">Membres</a></li>
+            <li><a href="/siteBAR/Views/Admin/ProductManager/index.php">Articles</a></li>
+            <li><a href="/siteBAR/Views/Admin//UserManager/index.php">Membres</a></li>
             <li><a href="#">Mails</a></li>
         </ul>
-
     </div>
-
 
     <!-- contenu admin -->
 

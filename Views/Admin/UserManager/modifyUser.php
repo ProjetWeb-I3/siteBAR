@@ -4,7 +4,7 @@
 
 	require_once '../../config/connect.php';
 
-	if (!$_SESSION['aadmin']){
+	if (!$_SESSION['adminBAR']){
 		header('location:../login.php');
 		}
 ?>

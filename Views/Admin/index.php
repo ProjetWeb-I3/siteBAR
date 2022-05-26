@@ -22,10 +22,10 @@ if (!$_SESSION['adminBAR']) {
 <body>
 
 <header id="header">
-    <a href="index.php" class="logo">ADMIN</a>
+    <a href="/siteBAR/Views/Admin/index.php" class="logo">ADMIN</a>
     <ul>
         <i class="fas fa-users-cog fa-2x"></i>
-        <li><a href="../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
+        <li><a href="../../Controllers/UserControllers/logout.php">Déconnexion</a></li>
     </ul>
 </header>
 
@@ -35,8 +35,8 @@ if (!$_SESSION['adminBAR']) {
     <!-- barre de gauche -->
     <div class="barre-gauche">
         <ul>
-            <li><a href="ProductManager/index.php">Articles</a></li>
-            <li><a href="UserManager/index.php">Membres</a></li>
+            <li><a href="/siteBAR/Views/Admin/ProductManager/index.php">Articles</a></li>
+            <li><a href="/siteBAR/Views/Admin/UserManager/index.php">Membres</a></li>
             <li><a href="#">Mails</a></li>
         </ul>
     </div>
@@ -46,7 +46,7 @@ if (!$_SESSION['adminBAR']) {
     <div class="admin-content">
         <div class="button-group">
             <a href="../fonctionAdminArticle/ajouterArticle.php" class="btn-group">Ajouter</a>
-            <a href="#" class="btn-group">Gerer les Articles</a>
+            <a href="#" class="btn-group">Gérer les Articles</a>
         </div>
 
         <div class="content">
