@@ -10,7 +10,7 @@ if (!$_SESSION['adminBAR']) {
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html class="html-membres" lang="fr">
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@ if (!$_SESSION['adminBAR']) {
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
 </head>
-<body class="admin-body">
+<body class="admin-body product-manager">
 
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
