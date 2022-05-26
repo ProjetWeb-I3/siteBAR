@@ -34,7 +34,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php'
 
                 <div>
                     <h4 class="titre">Nom du produit :</h4>
-                    <input type="text" name="name">
+                    <input class="form-text" type="text" name="name">
                 </div>
 
                 <div>
@@ -43,8 +43,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php'
                 </div>
 
                 <div>
-                    <h4 class="titre">Description du produit :</h4>
-                    <textarea class="area" name="content" cols="40" rows="4" placeholder="Votre texte"></textarea>
+                    <h4 class="form-titre">Description du produit :</h4>
+                    <textarea class="form-area" name="content" cols="40" rows="4" placeholder="Votre texte"></textarea>
                 </div>
                 <div>
                     <button class="btnp" type="submit" name="upload" value="Importation">Importation</button>

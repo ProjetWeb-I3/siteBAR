@@ -1184,24 +1184,36 @@ header ul li a:hover
   margin-bottom: 1rem;
 }
 
-form .titre {
+.form {
+  border: 1px solid;
+}
+.form-titre {
   margin-bottom: 1.5rem;
 }
+.form-text {
+  height: 10px;
+  width: 30%;
+  line-height: 2;
+  border: 1px solid;
+  border-radius: 2px;
+  font-size: 2em;
+  padding: 10px;
+}
+.form-area {
+  height: 250px;
+  width: 60%;
+  line-height: 2;
+  border: 1px solid;
+  border-radius: 5px;
+  font-size: 0.9em;
+  padding: 10px;
+}
 
-form input {
+.form input {
   height: 30px;
   width: 60%;
   margin-bottom: 1.5rem;
   font-size: 0.9em;
-}
-
-form .area {
-  height: 250px;
-  width: 60%;
-  line-height: 2;
-  border-radius: 5px;
-  font-size: 0.9em;
-  padding: 10px;
 }
 
 .btnp {
