@@ -15,7 +15,7 @@ require('../../Layouts/navbar.php');
 
 </head>
 <body>
-<h1>voici notre panier</h1>
+<h1 id="textPanier">voici notre panier</h1>
 
 
 <?php
@@ -23,7 +23,7 @@ session_start();
 //require_once '../../../Models/DatabaseModel/connect.php';
 global $conn;
 $user = $_SESSION['id_users'];
-echo $user;
+//echo $user;
 $req = $conn->query("SELECT * FROM carts WHERE id_users = '$user'");
 $productExist = $req->rowCount();
 $produitCart = $req->fetchALL();
@@ -33,18 +33,21 @@ if($productExist == 0 ){
     echo "le panier est vide ";
 }
 else
-{
-
-    foreach ($produitCart as $produitsCart): ?>
-
-        <h1><?= $produitsCart['id_products'] ?></h1>
-        <h1><?= $produitsCart['quantity_carts'] ?></h1>
-        <a href="functionMoreLess.php?MoreLess=0&amp;ref=<?= $produitsCart['id_products'] ?>">-</a>
-        <a href="functionMoreLess.php?MoreLess=1&amp;ref=<?= $produitsCart['id_products'] ?>">+</a>
-        <a href="functionDELETECart.php?idProductCart=<?= $produitsCart['id_carts'] ?>">Supprimer</a>
-
+{ ?>
+    <div class ="cart-container">
+<?php    foreach ($produitCart as $produitsCart): ?>
+        <div class="product-card">
+            <h2>Produit : <?= $produitsCart['id_products'] ?></h2>
+            <h2>Quantité : <?= $produitsCart['quantity_carts'] ?></h2>
+            <div class="modify-quantity">
+                <a href="functionMoreLess.php?MoreLess=0&amp;ref=<?= $produitsCart['id_products'] ?>">-</a>
+                <a href="functionMoreLess.php?MoreLess=1&amp;ref=<?= $produitsCart['id_products'] ?>">+</a><br>
+            </div>
+            <a href="functionDELETECart.php?idProductCart=<?= $produitsCart['id_carts'] ?>">Supprimer</a>
+        </div>
 
     <?php endforeach ?>
+    </div>
     <?php
 }
 ?>

@@ -1326,4 +1326,44 @@ th, td {
   margin-bottom: 25px;
 }
 
+.product-card {
+  margin: 3%;
+  border: 2px solid;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.cart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.5rem;
+}
+
+#textPanier {
+  padding-top: 90px;
+}
+
+.product-card a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.product-card .modify-quantity {
+  font-size: 2em;
+}
+
+.product-card a:hover {
+  text-decoration: none;
+  color: yellow;
+  background-color: black;
+  transition: all 0.25s;
+}
+
 /*# sourceMappingURL=style.css.map */
