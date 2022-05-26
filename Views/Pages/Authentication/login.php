@@ -50,7 +50,7 @@ global $IndexLink, $RegisterLink;
 
 				<div class="signup_link">
 					Pas encore membre ?<a href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/register.php" ?>"> Inscrivez-vous</a><br\>
-					<a href="<?php echo $IndexLink ?>">/ Retour</a><br\>
+					<a href="<?php echo $GLOBALS['URL']."/index.php" ; ?>">/ Retour</a><br\>
 				</div>
 <!--                $_SERVER['DOCUMENT_ROOT']-->
 				<div class="errorForm">
