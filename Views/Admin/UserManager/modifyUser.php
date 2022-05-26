@@ -16,8 +16,10 @@ if (!$_SESSION['adminBAR']) {
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
+
     <title>ADMIN | Membre</title>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="../tinymce/tinymce.min.js"></script>
 </head>
 <body>
 
@@ -40,7 +42,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
         <?php
 
         require_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/AdminControllers/UserControllers/getUser.php';
-
+        global $conn;
         $membres = getMembre($conn, 1, $_GET['id']);
 
         if (!isset($_GET['id'])) {
@@ -87,11 +89,19 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 
             <form method="POST" enctype="multipart/form-data">
                 <h4 class="titre">Le Pseudo : </h4>
-                <input type="text" name="pseudo" value="<?= $membres->username_users ?> "/>
 
+                <input class="form-text" type="text" name="pseudo" value="<?= $membres->username_users ?> "/>
+
+                <br/>
+                <br/>
                 <h4 class="titre">Le Mail : </h4>
-                <textarea class="area" name="mail"><?= $membres->mail_users ?></textarea>
 
+                <textarea class="area" id="mod" name="mail"><?= $membres->mail_users ?></textarea>
+                <script>
+                    tinymce.init({
+                        selector:'#mod'
+                    });
+                </script>
                 <br/>
                 <button class="btnp">Modifier</button>
 

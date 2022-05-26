@@ -92,6 +92,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 
             <form method="POST" enctype="multipart/form-data">
                 <h4 class="titre">Nom du produit : </h4>
+
                 <input class="form-text" type="text" name="title" value="<?= $articles->name_products ?> "/>
                 <br/>
                 <br/>
