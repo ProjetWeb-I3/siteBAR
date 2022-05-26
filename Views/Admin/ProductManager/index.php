@@ -3,7 +3,7 @@
 session_start();
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
-require_once '../../../Models/DatabaseModel/connect.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 
 if (!$_SESSION['adminBAR']) {
     header('location:../login.php');
@@ -33,8 +33,8 @@ if (!$_SESSION['adminBAR']) {
     <!-- barre de gauche -->
     <div class="barre-gauche">
         <ul>
-            <li><a href="index.php">Articles</a></li>
-            <li><a href="../UserManager/index.php">Membres</a></li>
+            <li><a href="/siteBAR/Views/Admin/ProductManager/index.php">Articles</a></li>
+            <li><a href="/siteBAR/Views/Admin//UserManager/index.php">Membres</a></li>
             <li><a href="#">Mails</a></li>
         </ul>
     </div>
@@ -44,12 +44,11 @@ if (!$_SESSION['adminBAR']) {
     <div class="admin-content">
 
         <div class="button-group">
-            <a href="../fonctionAdminArticle/addProduct.php" class="btn-group">Ajouter</a>
-            <a href="#" class="btn-group">Gerer les Articles</a>
+            <a href="/siteBAR/Views/Admin/ProductManager/addProduct.php" class="btn-group">Ajouter</a>
         </div>
 
         <div class="content">
-            <h2 class="titre-page"> Gerer les articles</h2>
+            <h2 class="titre-page"> Gérer les articles</h2>
             <table>
                 <thead>
                 <th>id</th>
@@ -89,12 +88,12 @@ if (!$_SESSION['adminBAR']) {
 
                         <td>
 
-                            <a href="../fonctionAdminArticle/modifyProduct.php?id=<?= $products['id_products'] ?>"
+                            <a href="modifyProduct.php?id=<?= $products['id_products'] ?>"
                                class="modifier">Modifier</a>
 
                             <a href="/siteBAR/Controllers/AdminControllers/ProductController/deleteProduct.php?id=<?= $products['id_products'] ?>" class="supprimer">Supprimer</a>
 
-                            <a href="#" class="publier">publier</a>
+                            <a href="/siteBAR/Controllers/AdminControllers/ProductController/publishProduct.php?id=<?= $products['id_products'] ?>" class="publier">Publier</a>
                         </td>
                     </tr>
 

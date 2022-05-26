@@ -13,11 +13,9 @@ if (!$_SESSION['adminBAR']) {
 <html>
 <head>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../style/admin.css">
+    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
     <title>ADMIN | Articles</title>
-
 
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
@@ -38,13 +36,11 @@ if (!$_SESSION['adminBAR']) {
     <!-- barre de gauche -->
     <div class="barre-gauche">
         <ul>
-            <li><a href="../ProductManager/index.php">Articles</a></li>
-            <li><a href="#">Membres</a></li>
+            <li><a href="/siteBAR/Views/Admin/ProductManager/index.php">Articles</a></li>
+            <li><a href="/siteBAR/Views/Admin/UserManager/index.php">Membres</a></li>
             <li><a href="#">Mails</a></li>
         </ul>
-
     </div>
-
 
     <!-- contenu admin -->
 
@@ -130,7 +126,7 @@ if (!$_SESSION['adminBAR']) {
                 <br/>
                 <button class="btnp">Modifier</button>
             </form>
-            <a class="btnp" href="modifierImage.php?id=<?= $_GET['id'] ?>">Modifier L'image</a>
+            <a class="btnp" href="../fonctionAdminArticle/modifierImage.php?id=<?= $_GET['id'] ?>">Modifier L'image</a>
         </div>
     </div>
 </div>
