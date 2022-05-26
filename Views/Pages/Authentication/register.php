@@ -125,7 +125,7 @@ global $IndexLink, $RegisterLink;
 
 
 			<div class="signup_link">
-				Déjà membre ?<a href="IdeaProjects/siteBAR/Views/Pages/Authentication/login.php"> Connexion</a><a href="<?php echo $IndexLink ; ?>"> / Retour</a><br\>
+				Déjà membre ?<a href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/login.php" ?>"> Connexion</a><a href="<?php echo $GLOBALS['URL']."/index.php" ; ?>"> / Retour</a><br\>
                 <br/>
                 <br/>
                 <?php

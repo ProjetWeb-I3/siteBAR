@@ -49,10 +49,10 @@ global $IndexLink, $RegisterLink;
 				<input type="submit"  value="Connexion" name="formconnexion">
 
 				<div class="signup_link">
-					Pas encore membre ?<a href="<?php echo $_SERVER['DOCUMENT_ROOT']."/Views/Pages/Authentication/register.php" ?>"> Inscrivez-vous</a><br\>
+					Pas encore membre ?<a href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/register.php" ?>"> Inscrivez-vous</a><br\>
 					<a href="<?php echo $IndexLink ?>">/ Retour</a><br\>
 				</div>
-
+<!--                $_SERVER['DOCUMENT_ROOT']-->
 				<div class="errorForm">
 					<h2>
 						<?php $Err = errorForm(); ?>
