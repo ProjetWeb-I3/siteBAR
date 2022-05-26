@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BAR ICAM</title>
+    <title>BAR ICAM TOULOUSE</title>
     <script src="https://kit.fontawesome.com/ad46913740.js" crossorigin="anonymous"></script>
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
 </head>
@@ -14,14 +14,12 @@
 session_start();
 
 require_once('config.php');
-
 require('Models/DatabaseModel/connect.php');
-
 require('Views/Layouts/navbar.php');
 
 ?>
+
 <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
-<!-- section1 presentation -->
 
 <section class="banner" id="home" style="background-image: url(<?php print "Views/img/imageBar/interieur.jpg" ?>);">
     <div class="textBx">

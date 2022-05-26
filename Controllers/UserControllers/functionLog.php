@@ -2,10 +2,6 @@
 
 session_start();
 
-		use PHPMailer\PHPMailer\PHPMailer;
-		use PHPMailer\PHPMailer\SMTP;
-		use PHPMailer\PHPMailer\Exception;
-
 global $LoginLink, $RegisterLink, $BDDlink, $IndexLink, $conn;
 
 $BDDlink = $_SERVER['DOCUMENT_ROOT'].'/Models/DatabaseModel/connect.php';

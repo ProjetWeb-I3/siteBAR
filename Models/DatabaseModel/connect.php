@@ -1,38 +1,14 @@
-<!-- on initialise notre base de données -->
+<?php
 
+require_once "identifier.php";
 
-<!DOCTYPE html>
-<html>
-    <head>
+global $conn;
 
-        <meta charset="utf-8">
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    </head>
-    <body>
+} catch (PDOException $e) {
+    echo "Erreur : " . $e->getMessage();
+}
 
-        <?php
-            $servernameBDD = '145.14.151.101';
-            $usernameBDD = 'u556968436_TeamWebsiteBar';
-            $passwordBDD = 'TeamWebsiteBar2022';
-            $BDDname = 'u556968436_siteBAR';
-            global $conn;
-
-            //On essaie de se connecter
-            try{
-                $conn = new PDO("mysql:host=$servernameBDD;dbname=$BDDname;charset=utf8", $usernameBDD, $passwordBDD);
-                //On définit le mode d'erreur de PDO sur Exception
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                echo 'Connexion réussie';
-                echo dirname(__DIR__);
-                echo $GLOBALS['URL'];
-
-            }
-
-            /*On capture les exceptions si une exception est lancée et on affiche
-             *les informations relatives à celle-ci*/
-            catch(PDOException $e){
-             	echo "Erreur : " . $e->getMessage();
-            }
-        ?>
-    </body>
-</html>
