@@ -1,12 +1,6 @@
 <?php
 
-session_start();
-
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
-
-if (!$_SESSION['adminBAR']) {
-    header('location:/siteBAR/Views/Admin/login.php');
-}
 
 try {
     if (isset($_POST['upload'])) {
