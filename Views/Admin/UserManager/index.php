@@ -26,6 +26,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 ?>
 
 <div class="admin-wrapper">
+
     <!-- barre de gauche -->
     <?php
     require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
@@ -34,10 +35,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
     <!-- contenu admin -->
 
     <div class="admin-content">
-        <div class="button-group">
-            <a href="#" class="btn-group">Ajouter</a>
-
-        </div>
 
         <div class="content">
 
