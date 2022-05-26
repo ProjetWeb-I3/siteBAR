@@ -2,9 +2,9 @@
 
 session_start();
 
-require_once '../../config/connect.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 
-if (!$_SESSION['aadmin']) {
+if (!$_SESSION['adminBAR']) {
     header('location:../login.php');
 }
 ?>
@@ -27,9 +27,7 @@ if (!$_SESSION['aadmin']) {
     <a href="../index.php" class="logo">ADMIN</a>
     <ul>
         <i class="fas fa-users-cog fa-2x"></i>
-        <li><a href="#"> Bienvenue <?= $_SESSION['aadmin'] ?> </a></li>
-        <!-- class="active" onclick="toggle()"-->
-
+        <li><a href="#"> Bienvenue <?= $_SESSION['adminBAR'] ?> </a></li>
     </ul>
 
 </header>
@@ -40,7 +38,7 @@ if (!$_SESSION['aadmin']) {
     <!-- barre de gauche -->
     <div class="barre-gauche">
         <ul>
-            <li><a href="../articles/index.php">Articles</a></li>
+            <li><a href="../ProductManager/index.php">Articles</a></li>
             <li><a href="#">Membres</a></li>
             <li><a href="#">Mails</a></li>
         </ul>
@@ -58,8 +56,8 @@ if (!$_SESSION['aadmin']) {
 
         <?php
 
-        require_once '../../config/connect.php';
-        require_once 'getProduct.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/AdminControllers/ProductController/getProduct.php';
 
 
         $articles = getArticle($conn, 1, $_GET['id']);
@@ -69,7 +67,7 @@ if (!$_SESSION['aadmin']) {
             header('location:../index.php');
         }
 
-        if (!isset($_SESSION['aadmin']) || empty($_SESSION['aadmin'])) {
+        if (!isset($_SESSION['adminBAR']) || empty($_SESSION['adminBAR'])) {
             header('location:../index.php');
         }
 
@@ -99,7 +97,7 @@ if (!$_SESSION['aadmin']) {
         ?>
 
         <div class="container">
-            <h3 class="titre-page">Modifier l'article "<?= $articles->title ?>"</h3>
+            <h3 class="titre-page">Modifier l'article "<?= $articles->name_products ?>"</h3>
             <h4 class="titre-page2">Laissez vide si aucun changement</h4>
 
             <?php
@@ -112,7 +110,7 @@ if (!$_SESSION['aadmin']) {
             <!-- <form method="post" action="ajouterArticle.php"  enctype="multipart/form-data"> -->
             <form method="POST" enctype="multipart/form-data">
                 <h4 class="titre">Le Titre : </h4>
-                <input type="text" name="title" value="<?= $articles->title ?> "/>
+                <input type="text" name="title" value="<?= $articles->name_products ?> "/>
                 <div>
                     <h4 class="titre">Auteur : </h4>
                     <select class="select" name='auteur'>
@@ -126,9 +124,9 @@ if (!$_SESSION['aadmin']) {
                         <option value="Thibaut">Thibaut</option>
                     </select>
                 </div>
-                <!-- <input type="date" name="anniversaire"> -->
+
                 <h4 class="titre">Le contenu : </h4>
-                <textarea class="area" name="content"><?= $articles->content ?></textarea>
+                <textarea class="area" name="content"><?= $articles->content_products ?></textarea>
                 <br/>
                 <button class="btnp">Modifier</button>
             </form>

@@ -2,9 +2,7 @@
 
 session_start();
 
-//$_SESSION['adminBAR'] = true;
-
-require_once '../../Models/DatabaseModel/connect.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 
 if (!$_SESSION['adminBAR']) {
     header('location:login.php');
@@ -15,16 +13,13 @@ if (!$_SESSION['adminBAR']) {
 <html>
 <head>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceuil - Administration</title>
     <link rel="stylesheet" type="text/css" href="style/admin.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
-
 </head>
 <body>
-
 
 <header id="header">
     <a href="index.php" class="logo">ADMIN</a>
@@ -40,12 +35,11 @@ if (!$_SESSION['adminBAR']) {
     <!-- barre de gauche -->
     <div class="barre-gauche">
         <ul>
-            <li><a href="articles/index.php">Articles</a></li>
-            <li><a href="Membres/index.php">Membres</a></li>
+            <li><a href="ProductManager/index.php">Articles</a></li>
+            <li><a href="UserManager/index.php">Membres</a></li>
             <li><a href="#">Mails</a></li>
         </ul>
     </div>
-
 
     <!-- contenu admin -->
 
@@ -57,15 +51,11 @@ if (!$_SESSION['adminBAR']) {
 
         <div class="content">
 
-
         </div>
-
 
     </div>
 
-
 </div>
-
 
 </body>
 </html>

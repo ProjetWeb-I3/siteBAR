@@ -13,9 +13,9 @@
 
 session_start();
 
-require_once('config.php');
-require('Models/DatabaseModel/connect.php');
-require('Views/Layouts/navbar.php');
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/Views/Layouts/navbar.php';
 
 ?>
 

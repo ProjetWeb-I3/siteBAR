@@ -1,39 +1,27 @@
-<?php 
-	
-	session_start(); 
+<?php
 
-	require_once '../../config/connect.php'; 
+session_start();
 
-	if (!$_SESSION['aadmin']){
-		header('location:../login.php');
-		}
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 
-
-
-if (isset($_SESSION['aadmin']) AND !empty($_SESSION['aadmin'])){	
-	if (isset($_GET['id'])) {
-		$req = $conn->query('SELECT * FROM articles WHERE id = ' .$_GET['id']);
-
-		$articles = $req->fetch();
-		if ($articles) {
-			$req = $conn->query('DELETE FROM articles WHERE id = ' .$_GET['id']);
-			header('location:../articles/index.php');
-		}else{
-			header('location:../articles/index.php');
-		}
-
-
-
-
-
-		
-	}
-}else{
-	header('location:../articles/index.php');
+if (!$_SESSION['adminBAR']) {
+    header('location:../login.php');
 }
 
+if (isset($_SESSION['adminBAR']) and !empty($_SESSION['adminBAR'])) {
+    if (isset($_GET['id'])) {
+        $req = $conn->query('SELECT * FROM products WHERE id_products = ' . $_GET['id']);
 
+        $articles = $req->fetch();
+        if ($articles) {
+            $req = $conn->query('DELETE FROM products WHERE id_products = ' . $_GET['id']);
+            header('location:../articles/index.php');
+        } else {
+            header('location:../articles/index.php');
+        }
 
+    }
+} else {
+    header('location:../articles/index.php');
+}
 
-
-?>

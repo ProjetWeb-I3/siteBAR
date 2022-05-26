@@ -92,7 +92,7 @@
 		<!-- barre de gauche -->
 		<div class="barre-gauche">
 			<ul>
-				<li><a href="../articles/index.php">Articles</a></li>
+				<li><a href="../ProductManager/index.php">Articles</a></li>
 				<li><a href="#">Membres</a></li>
 				<li><a href="#">Mails</a></li>
 			</ul>
