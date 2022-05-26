@@ -12,7 +12,7 @@ if (!$_SESSION['adminBAR']) {
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html class="html-users " lang="fr">
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,10 +91,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 
             <form method="POST" enctype="multipart/form-data">
                 <h4 class="titre">Nom du produit : </h4>
-                <input type="text" name="title" value="<?= $articles->name_products ?> "/>
+                <input class="form-text" type="text" name="title" value="<?= $articles->name_products ?> "/>
 
                 <h4 class="titre">Description du produit : </h4>
-                <textarea class="area" name="content"><?= $articles->content_products ?></textarea>
+                <textarea class="form-area" name="content"><?= $articles->content_products ?></textarea>
                 <br/>
                 <button class="btnp">Modifier</button>
             </form>
