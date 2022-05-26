@@ -78,7 +78,6 @@ function Register()
                 $reqpseudo = $conn->prepare('SELECT * FROM users WHERE username_users = ?');
                 $reqpseudo->execute(array($username));
                 $pseudoexist = $reqpseudo->rowCount();
-//                echo $pseudoexist;
                 echo $mail;
                 echo $mail2;
                 if ($pseudoexist == 0) {

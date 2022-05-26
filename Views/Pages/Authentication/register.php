@@ -32,7 +32,7 @@ global $IndexLink, $RegisterLink;
 
 
 			<div class="txt_field">
-				<input type="text" id="username" required name="username" value="<?php if(isset($username)) { echo $username; }?>">
+				<input type="text" id="username" required name="username" >
 				<span></span>
 				<label for="username">Pseudo</label>
 			</div>
