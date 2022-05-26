@@ -9,12 +9,15 @@ if (!$_SESSION['adminBAR']) {
 }
 
 if (isset($_SESSION['adminBAR']) and !empty($_SESSION['adminBAR'])) {
+
     if (isset($_GET['id'])) {
-        $req = $conn->query('SELECT * FROM membres WHERE id = ' . $_GET['id']);
+
+        $req = $conn->query('SELECT * FROM users WHERE id_users =' . $_GET['id']);
 
         $membres = $req->fetch();
+
         if ($membres) {
-            $req = $conn->query('DELETE FROM membres WHERE id = ' . $_GET['id']);
+            $req = $conn->query('DELETE FROM users WHERE id_users = ' . $_GET['id']);
         }
         header('Location: /siteBAR/Views/Admin/UserManager/index.php');
     }

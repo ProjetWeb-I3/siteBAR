@@ -41,7 +41,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 
         <div class="content">
 
-            <h2 class="titre-page"> Gerer les Membres</h2>
+            <h2 class="titre-page"> Gérer les Membres</h2>
 
             <table>
                 <thead>

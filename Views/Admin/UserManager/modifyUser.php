@@ -54,7 +54,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
         if (isset($_POST) and !empty($_POST)) {
             if (!empty($_POST['pseudo']) and !empty($_POST['mail'])) {
 
-
                 $req = $conn->prepare('UPDATE users SET username_users = :pseudo, mail_users = :mail WHERE id_users = :id');
                 $req->execute([
 
@@ -64,21 +63,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 
                 ]);
 
-
                 $_SESSION['flash']['success'] = 'Article modifié';
                 header('location:index.php');
 
             } else {
                 $_SESSION['flash']['error'] = 'champs manquants';
-
             }
         }
         ?>
 
-
         <div class="container">
 
-            <h3 class="titre-page">Modifier Le Membre : "<?= $membres->pseudo ?>"</h3>
+            <h3 class="titre-page">Modifier Le Membre : "<?= $membres->username_users ?>"</h3>
             <h4 class="titre-page2">Laissez vide si aucun changement</h4>
 
             <?php
@@ -87,14 +83,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
             } elseif (isset($_SESSION['flash']['error'])) {
                 echo "<div class='error'>" . $_SESSION['flash']['error'] . '</div>';
             }
-
-
             ?>
 
             <form method="POST" enctype="multipart/form-data">
                 <h4 class="titre">Le Pseudo : </h4>
                 <input type="text" name="pseudo" value="<?= $membres->username_users ?> "/>
-
 
                 <h4 class="titre">Le Mail : </h4>
                 <textarea class="area" name="mail"><?= $membres->mail_users ?></textarea>
@@ -104,13 +97,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 
             </form>
 
-
         </div>
-
 
     </div>
 </div>
-
 
 </body>
 </html>

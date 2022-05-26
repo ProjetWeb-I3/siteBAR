@@ -38,7 +38,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
         </div>
 
         <div class="content ">
-            <h2 class="titre-page"> Gerer les articles</h2>
+            <h2 class="titre-page"> Gérer les articles</h2>
             <table class="product-managerFontsizetable">
                 <thead>
                 <th>id</th>
