@@ -29,7 +29,7 @@
             <ul class="menu primary">
                 <li class="logo over"><a class="text-font over" href="<?php echo $GLOBALS['URL']."/index.php";?>">BAR ICAM TOULOUSE</a></li>
                 <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/index.php";?>">ACCUEIL</a></li>
-                <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/products/product.php";?>">PRODUITS</a></li>
+                <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/products/products.php";?>">PRODUITS</a></li>
                 <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Recommandation/recommandation.php";?>">BONS PLANS</a></li>
                 <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Cart/cart.php";?>">PANIER</a></li>
                 <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Contact/contact.php";?>">CONTACT</a></li>
@@ -65,7 +65,7 @@
                     ?>
 
                     <li class="item button "><a class= "text-font over_size-connexion" href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/login.php";?>">Connexion</a></li>
-                    <li class="item button "><a class= "text-font over_size-connexion" href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/Register.php";?>">Inscription</a></li>
+                    <li class="item button "><a class= "text-font over_size-connexion" href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/register.php";?>">Inscription</a></li>
                     <li class="toggle"><span class="bars"></span></li>
 
                     <?php
