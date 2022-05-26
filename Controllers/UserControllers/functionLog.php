@@ -8,7 +8,7 @@ session_start();
 
 global $LoginLink, $RegisterLink, $BDDlink, $IndexLink, $conn;
 
-$BDDlink=$_SERVER['DOCUMENT_ROOT'].'/Models/DatabaseModel/connect.php';
+$BDDlink = $_SERVER['DOCUMENT_ROOT'].'/Models/DatabaseModel/connect.php';
 $LoginLink = $_SERVER['DOCUMENT_ROOT']."/Views/Pages/Authentication/login.php";
 $RegisterLink =$_SERVER['DOCUMENT_ROOT']."/Views/Pages/Authentication/Register.php";
 $IndexLink = $_SERVER['DOCUMENT_ROOT']."/index.php";
