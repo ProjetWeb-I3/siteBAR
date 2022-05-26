@@ -2,10 +2,11 @@
 
 session_start();
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 require_once '../../../Models/DatabaseModel/connect.php';
 
 if (!$_SESSION['adminBAR']) {
-    header('location:../login.php');
+    header('Location: /siteBAR/Views/Admin/login.php');
 }
 ?>
 
@@ -14,7 +15,7 @@ if (!$_SESSION['adminBAR']) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN | Membres</title>
-    <link rel="stylesheet" type="text/css" href="siteBAR/Views/Admin/style/admin.scss">
+    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 
@@ -24,7 +25,7 @@ if (!$_SESSION['adminBAR']) {
     <a href="../index.php" class="logo">ADMIN</a>
     <ul>
         <i class="fas fa-users-cog fa-2x"></i>
-        <li><a href="../../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
+        <li><a href="../../../Controllers/UserControllers/logout.php">Déconnexion</a></li>
     </ul>
 </header>
 

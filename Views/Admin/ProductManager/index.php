@@ -3,10 +3,9 @@
 session_start();
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
-require_once '../../../Models/DatabaseModel/connect.php';
 
 if (!$_SESSION['adminBAR']) {
-    header('location:../login.php');
+    header('Location: /siteBAR/Views/Admin/login.php');
 }
 ?>
 
