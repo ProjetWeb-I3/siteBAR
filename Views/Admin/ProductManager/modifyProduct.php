@@ -19,6 +19,7 @@ if (!$_SESSION['adminBAR']) {
     <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
     <title>ADMIN | Articles</title>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="../tinymce/tinymce.min.js"></script>
 </head>
 <body class="admin-body">
 
@@ -92,9 +93,23 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
             <form method="POST" enctype="multipart/form-data">
                 <h4 class="titre">Nom du produit : </h4>
                 <input class="form-text" type="text" name="title" value="<?= $articles->name_products ?> "/>
+                <br/>
+                <br/>
 
                 <h4 class="titre">Description du produit : </h4>
-                <textarea class="form-area" name="content"><?= $articles->content_products ?></textarea>
+
+
+
+
+                <textarea class="form-area" id="mod"name="content"><?= $articles->content_products ?></textarea>
+
+                <script>
+                    tinymce.init({
+                        selector:'#mod'
+                    });
+                </script>
+
+
                 <br/>
                 <button class="btnp">Modifier</button>
             </form>
