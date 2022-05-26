@@ -6,7 +6,7 @@
 
     <title>ADMIN | Membres</title>
 
-    <link rel="stylesheet" type="text/css" href="../style/admin.css">
+    <link rel="stylesheet" type="text/css" href="siteBAR/Views/Admin/style/admin.scss">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 
