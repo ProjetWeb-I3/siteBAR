@@ -550,6 +550,10 @@ section {
   padding: 100px 10px 100px;
 }
 
+.p-accueil {
+  text-transform: none;
+}
+
 .banner {
   position: relative;
   min-height: 100vh;
