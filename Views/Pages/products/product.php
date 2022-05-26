@@ -33,50 +33,50 @@ require('../../Layouts/navbar.php');
 <!--<a href="https://ibb.co/Ssvnzz7"><img src="https://i.ibb.co/PmChddz/vedett.png" alt="vedett" border="0"></a>-->
 
 
-<link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
+<link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
 <!--<section class="produitBiere" id="produitBiere">-->
 
 <div class="produitBiere">
+    <div class="margin-top-product">
+
+        <!-- <h3 class="sub-heading"> NOS BIERE </h3> -->
+        <!-- <h1 class="heading"> popular produitBiere </h1> -->
+
+        <div class="box-container">
+
+            <?php
+
+            require_once '../../../Models/DatabaseModel/connect.php';
+            require_once '../../../Controllers/AdminControllers/ProductController/getProduct.php';
+            global $conn;
+            //
+            $req = $conn->query('SELECT * FROM products ');
+            while ($article = $req->fetch()) {
+                if ($article['visibility'] == 1) {
+                    echo $before_image;
+
+                    echo '<img src="';
+                    echo $article["image_products"];
+                    echo '" alt="">';
+
+                    echo '<h3>';
+                    echo $article["name_products"];
+                    echo '</h3>';
+
+                    echo $stars;
+
+                    echo '<span class="price">';
+                    echo $article["price_products"];
+                    echo '</span>';
+
+                    echo $after_price;
+                }
 
 
-    <!-- <h3 class="sub-heading"> NOS BIERE </h3> -->
-    <!-- <h1 class="heading"> popular produitBiere </h1> -->
-
-    <div class="box-container">
-
-        <?php
-
-        require_once '../../../Models/DatabaseModel/connect.php';
-        require_once '../../../Controllers/AdminControllers/ProductController/getProduct.php';
-        global $conn;
-//
-        $req = $conn->query('SELECT * FROM products ');
-        while($article = $req->fetch()){
-            if($article['visibility'] == 1){
-                echo $before_image;
-
-                echo '<img src="';
-                echo $article["image_products"];
-                echo '" alt="">';
-
-                echo '<h3>';
-                echo $article["name_products"];
-                echo '</h3>';
-
-                echo $stars;
-
-                echo '<span class="price">';
-                echo $article["price_products"];
-                echo '</span>';
-
-                echo $after_price;
             }
+            ?>
 
-
-        }
-        ?>
-
-        <?php/*
+            <? php/*
         for ($i=0; $i<7; $i++) {
             echo $before_image;
             echo $image;
@@ -87,12 +87,12 @@ require('../../Layouts/navbar.php');
         }*/
 
 
-         ?>
+            ?>
+        </div>
+
+
     </div>
-
-
 </div>
-
 <?php
 require('../../Layouts/footer.php');
 ?>
