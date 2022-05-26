@@ -1165,7 +1165,6 @@ header ul li a:hover
   flex: 8;
   flex-direction: row;
   height: 100%;
-  padding-right: 10%;
   padding: 40px 100px 100px;
   overflow-y: scroll;
 }
