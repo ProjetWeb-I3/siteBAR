@@ -3,7 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php'
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html class="html-users" lang="fr">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
