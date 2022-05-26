@@ -19,6 +19,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/Views/Layouts/navbar.php';
 
 ?>
 
+d
 <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
 
 <section class="banner" id="home" style="background-image: url(<?php print "Views/img/imageBar/interieur.jpg" ?>);">
