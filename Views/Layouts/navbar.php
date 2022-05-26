@@ -24,7 +24,7 @@
     <nav>
 
         <ul class="menu primary">
-            <li class="logo over"><a class="text-font over" href="<?php echo $GLOBALS['URL'] . "/index.php"; ?>">BAR
+            <li class="logo over"><a class="text-font over" href="<?php echo $GLOBALS['URL']."/index.php"; ?>">BAR
                     ICAM TOULOUSE</a></li>
             <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL'] . "/index.php"; ?>">ACCUEIL</a></li>
             <li class="item primary_animation"><a
@@ -40,7 +40,7 @@
 
             <?php
             global $conn;
-            if (isset($_SESSION['id_users']) and $_GET['id_users'] > 0) {
+            if (isset($_SESSION['id_users'])  > 0) {
                 $getid = $_SESSION['id_users'];
                 $requser = $conn->prepare('SELECT * FROM users WHERE id_users = ?');
                 $requser->execute(array($getid));
