@@ -57,7 +57,7 @@ require('../../Layouts/navbar.php');
                 if ($article['visibility'] == 1) {
                     echo $before_image;
 
-                    echo '<img src="';
+                    echo '<img src="../../Admin/ProductManager/imgProductsBar/';
                     echo $article["image_products"];
                     echo '" alt="">';
 

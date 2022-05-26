@@ -23,7 +23,7 @@
 
 
 	                
-	                $sql = $conn->prepare('UPDATE articles SET image = :image WHERE id = :id');
+	                $sql = $conn->prepare('UPDATE products SET image_products = :image WHERE id_products = :id');
 
 
 							
@@ -32,7 +32,6 @@
 
 								'image' => $_FILES['image']['name'],
 								'id' => $_GET['id'],
-								
 
 
 							]);
