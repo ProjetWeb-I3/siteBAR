@@ -5,33 +5,10 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 require_once('../../../config.php');
 
-$before_image =
-    '<div class="box">
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-eye"></a>';
-$stars =
-    '<div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-    </div>';
-//$after_price =
-//    '<a class="btnPRODUCT" href="../Cart/functionADDCart.php?refProductCart=".$produits["refProduct"]>Ajouter Panier</a>
-//    </div>';
-$image = '<img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">'; //changer le lien par une variable qui boucle sur la BDD
-$name = '<h3>Chouffe</h3>';//changer le nom par une variable qui boucle sur la BDD
-$price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur la BDD (données à récupérer avec getProduct.php et productInfo.php)
+
+
 require('../../Layouts/navbar.php');
 ?>
-
-<!--<a href="https://ibb.co/9pTFXfM"><img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="chouffe" border="0"></a>-->
-<!--<a href="https://ibb.co/7CPn4fx"><img src="https://i.ibb.co/c306LBK/CT.png" alt="CT" border="0"></a>-->
-<!--<a href="https://ibb.co/gmjXwXw"><img src="https://i.ibb.co/WGxdFdF/licorne.png" alt="licorne" border="0"></a>-->
-<!--<a href="https://ibb.co/HLZMGvQ"><img src="https://i.ibb.co/vC9rL58/paixdieu.png" alt="paixdieu" border="0"></a>-->
-<!--<a href="https://ibb.co/QFn8Dfc"><img src="https://i.ibb.co/5WvYK69/triplek.png" alt="triplek" border="0"></a>-->
-<!--<a href="https://ibb.co/Ssvnzz7"><img src="https://i.ibb.co/PmChddz/vedett.png" alt="vedett" border="0"></a>-->
 
 
 <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
@@ -53,60 +30,52 @@ require('../../Layouts/navbar.php');
             global $conn;
             //
             $req = $conn->query('SELECT * FROM products ');
-            while ($article = $req->fetch()) {
-                if ($article['visibility'] == 1) {
-                    echo $before_image;
+            $article = $req->fetchALL();
+            foreach ($article as $articles): ?>
+                <div class="box">
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                    <img src="../../Admin/ProductManager/imgProductsBar/<?php echo $articles['image_products'] ; ?>" >
+                    <h3><?php echo $articles["name_products"]; ?></h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="price"> <?php echo $articles["price_products"]; ?> €</span>
 
-                    echo '<img src="../../Admin/ProductManager/imgProductsBar/';
-                    echo $article["image_products"];
-                    echo '" alt="">';
+                    <?php
 
-                    echo '<h3>';
-                    echo $article["name_products"];
-                    echo '</h3>';
+                        if (isset($_SESSION['id_users'])) { ?>
 
-                    echo $stars;
-
-                    echo '<span class="price">';
-                    echo $article["price_products"];
-                    echo '</span>';
-
-//                    echo $after_price;
-
-                    if (isset($_SESSION['id_users'])) {
-                        $after_price =
-                            '<a class="btnPRODUCT" href="../Cart/functionADDCart.php?refProductCart=".$produits["refProduct"]>Ajouter Panier</a>	
-    </div>';
-                        echo $after_price;
-
-                    }
-                    else{
-                        $after_price = '<a class="btnPRODUCT">Connectez vous !</a></div>';
-
-                        echo $after_price;
+                                <a class="btnPRODUCT" href="../Cart/functionADDCart.php?refProductCart=<?=$articles["id_products"] ?>">Ajouter Panier</a>
 
 
-                    }
+                        <?php
+                        }
+                        else{ ?>
+
+                            <a class="btnPRODUCT">Connectez vous !</a>
+
+                        <?php
 
 
-                }
+                        }
 
 
-            }
-            ?>
+                    ?>
 
-            <? php/*
-        for ($i=0; $i<7; $i++) {
-            echo $before_image;
-            echo $image;
-            echo $name;
-            echo $stars;
-            echo $price;
-            echo $after_price;
-        }*/
+                </div>
 
 
-            ?>
+
+            <?php endforeach ?>
+
+
+            
+
         </div>
 
 

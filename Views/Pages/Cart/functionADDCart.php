@@ -14,6 +14,7 @@ if (isset($_SESSION['id_users']) AND !empty($_SESSION['id_users']))
 	if (isset($_GET['refProductCart'])) 
 	{
 		$ref= $_GET['refProductCart'] ;
+        echo $ref;
         echo $_GET['refProductCart'];
 		$user = $_SESSION['id_users'];
 		$req = $conn->prepare('SELECT * FROM carts WHERE id_products =? AND id_users = ?');
