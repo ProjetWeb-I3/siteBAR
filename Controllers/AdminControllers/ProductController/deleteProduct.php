@@ -15,6 +15,7 @@ if (isset($_SESSION['adminBAR']) and !empty($_SESSION['adminBAR'])) {
         header('Location: /siteBAR/Views/Admin/ProductManager/index.php');
 
     }
+
 } else {
     header('Location: /siteBAR/Views/Admin/ProductManager/index.php');
 }

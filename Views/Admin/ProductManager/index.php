@@ -79,7 +79,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 
                         <td>
 
-                            <a href="../fonctionAdminArticle/modifyProduct.php?id=<?= $products['id_products'] ?>"
+                            <a href="/siteBAR/Views/Admin/ProductManager/modifyProduct.php?id=<?= $products['id_products'] ?>"
                                class="modifier">Modifier</a>
 
                             <a href="/siteBAR/Controllers/AdminControllers/ProductController/deleteProduct.php?id=<?= $products['id_products'] ?>"

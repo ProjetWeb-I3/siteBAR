@@ -35,13 +35,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.p
 <!-- contenu admin -->
 
 <div class="admin-content">
-    <div class="button-group">
-        <a href="../fonctionAdminArticle/ajouterArticle.php" class="btn-group">Ajouter</a>
-        <a href="#" class="btn-group">Gerer les Articles</a>
-    </div>
 
     <div class="content">
-
+<p>Bienvenue sur l'espace d'administration du bar !</p>
     </div>
 
 </div>
