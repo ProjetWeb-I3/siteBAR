@@ -12,81 +12,83 @@ if (!$_SESSION['adminBAR']) {
 
 <!DOCTYPE html>
 <html class="html-users" lang="fr">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMIN | Membres</title>
-    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
-    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
-</head>
 
-<body class="admin-body">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ADMIN | Membres</title>
+        <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    </head>
 
-<?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
-?>
+    <body class="admin-body">
 
-<div class="admin-wrapper">
-
-    <!-- barre de gauche -->
     <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
     ?>
 
-    <!-- contenu admin -->
+    <div class="admin-wrapper">
 
-    <div class="admin-content">
+        <!-- barre de gauche -->
+        <?php
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
+        ?>
 
-        <div class="content">
+        <!-- contenu admin -->
 
-            <h2 class="titre-page"> Gérer les Membres</h2>
+        <div class="admin-content">
 
-            <table>
-                <thead>
-                <th>id</th>
-                <th>Pseudo</th>
-                <th>Rank</th>
-                <th>Mail</th>
-                <th colspan="3">Action</th>
-                </thead>
+            <div class="content">
 
-                <tbody>
+                <h2 class="titre-page"> Gérer les Membres</h2>
 
-                <?php
-                global $conn;
-                require_once '../../../Models/DatabaseModel/connect.php';
-                $req = $conn->query('SELECT * FROM users');
+                <table>
+                    <thead>
+                    <th>id</th>
+                    <th>Pseudo</th>
+                    <th>Rank</th>
+                    <th>Mail</th>
+                    <th colspan="3">Action</th>
+                    </thead>
 
-                $membre = $req->fetchALL();
+                    <tbody>
 
-                foreach ($membre as $membres): ?>
+                    <?php
+                    global $conn;
+                    require_once '../../../Models/DatabaseModel/connect.php';
+                    $req = $conn->query('SELECT * FROM users');
 
-                    <tr>
-                        <td><?= $membres['id_users'] ?> </td>
-                        <td><?= $membres['lastname_users'] ?> </td>
-                        <td><?= $membres['rank_users'] ?> </td>
-                        <td><?= $membres['mail_users'] ?> </td>
+                    $membre = $req->fetchALL();
 
-                        <td>
+                    foreach ($membre as $membres): ?>
 
-                            <a href="/siteBAR/Views/Admin/UserManager/modifyUser.php?id=<?= $membres['id_users'] ?>"
-                               class="modifier">Modifier</a>
+                        <tr>
+                            <td><?= $membres['id_users'] ?> </td>
+                            <td><?= $membres['lastname_users'] ?> </td>
+                            <td><?= $membres['rank_users'] ?> </td>
+                            <td><?= $membres['mail_users'] ?> </td>
 
-                            <a href="/siteBAR/Controllers/AdminControllers/UserControllers/deleteUser.php?id=<?= $membres['id_users'] ?>"
-                               class="supprimer">Supprimer</a>
-                        </td>
-                    </tr>
+                            <td>
 
-                <?php endforeach ?>
+                                <a href="/siteBAR/Views/Admin/UserManager/modifyUser.php?id=<?= $membres['id_users'] ?>"
+                                   class="modifier">Modifier</a>
 
-                </tbody>
-            </table>
+                                <a href="/siteBAR/Controllers/AdminControllers/UserControllers/deleteUser.php?id=<?= $membres['id_users'] ?>"
+                                   class="supprimer">Supprimer</a>
+                            </td>
+                        </tr>
+
+                    <?php endforeach ?>
+
+                    </tbody>
+                </table>
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
 
+    </body>
 
-</body>
 </html>
