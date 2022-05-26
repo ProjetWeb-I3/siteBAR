@@ -1,6 +1,7 @@
 <?php
 
 require_once('../../../config.php');
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 require('../../Layouts/navbar.php');
 
 ?>

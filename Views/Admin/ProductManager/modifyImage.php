@@ -1,23 +1,24 @@
 <?php 
 	
-	session_start(); 
+	session_start();
 
-	require_once '../../config/connect.php'; 
+    require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 
-	if (!$_SESSION['aadmin']){
-		header('location:../login.php');
-		}
+    if (!$_SESSION['adminBAR']) {
+        header('Location: /siteBAR/Views/Admin/login.php');
+    }
 
 
 
 
             	if (isset($_POST['change']) AND !empty($_POST['change'])) {
 
-            		$target = "../imagesArticle/".basename($_FILES['image']['name']);
-					require_once '../../config/connect.php'; 
+            		$target = "imgProductsBar/".basename($_FILES['image']['name']);
+                    require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 	                
 
 				    // $image = $_FILES['image']['name'];
+                    global $conn;
 					
 
 
