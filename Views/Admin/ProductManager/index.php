@@ -2,6 +2,7 @@
 
 session_start();
 
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 require_once '../../../Models/DatabaseModel/connect.php';
 
 if (!$_SESSION['adminBAR']) {
@@ -14,7 +15,7 @@ if (!$_SESSION['adminBAR']) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN | Articles</title>
-    <link rel="stylesheet" type="text/css" href="../style/admin.css">
+    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -91,8 +92,7 @@ if (!$_SESSION['adminBAR']) {
                             <a href="../fonctionAdminArticle/modifyProduct.php?id=<?= $products['id_products'] ?>"
                                class="modifier">Modifier</a>
 
-<!--                            <a href=--><?php //echo $_SERVER['DOCUMENT_ROOT']  . '/Controllers/AdminControllers/ProductController/deleteProduct.php?id=' . $products['id_products'] ?><!-- class="supprimer">Supprimer</a>-->
-                            <a href=<?php echo '/siteBAR/Controllers/AdminControllers/ProductController/deleteProduct.php?id='.$products['id_products'] ?> class="supprimer">Supprimer</a>
+                            <a href="/siteBAR/Controllers/AdminControllers/ProductController/deleteProduct.php?id=<?= $products['id_products'] ?>" class="supprimer">Supprimer</a>
 
                             <a href="#" class="publier">publier</a>
                         </td>
