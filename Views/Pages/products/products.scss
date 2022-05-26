@@ -11,12 +11,17 @@
     /*margin:0; padding:0;*/
     box-sizing: border-box;
     text-decoration: none;
-    outline: none; 
+    outline: none;
     border:none;
     text-transform: capitalize;
     /*transition: all .2s linear;*/
 }
-
+.title{
+    text-align: center;
+    text-transform: none;
+    font-size:6rem;
+    padding:2%;
+}
 .margin-top-product{
     margin-top:5%;
 }
@@ -36,7 +41,7 @@ html{
 
 .produitBiere{
     padding:2rem 9%;
-    
+
 
 
 }
@@ -61,7 +66,7 @@ html{
     cursor: pointer;
     padding:.8rem 3rem;
     text-decoration: none;
-    outline: none; 
+    outline: none;
     border:none;
 }
 
@@ -71,7 +76,7 @@ html{
     color: #111;
     /*border: 1px solid;*/
     text-decoration: none;
-    outline: none; 
+    outline: none;
     border:none;
 }
 

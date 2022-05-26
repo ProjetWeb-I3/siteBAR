@@ -38,6 +38,7 @@ require('../../Layouts/navbar.php');
 
 <div class="produitBiere">
     <div class="margin-top-product">
+        <h1 class="title"> Nos produits sont disponibles !</h1>
 
         <!-- <h3 class="sub-heading"> NOS BIERE </h3> -->
         <!-- <h1 class="heading"> popular produitBiere </h1> -->

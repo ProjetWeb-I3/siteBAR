@@ -399,6 +399,13 @@ body {
   /*transition: all .2s linear;*/
 }
 
+.title {
+  text-align: center;
+  text-transform: none;
+  font-size: 6rem;
+  padding: 2%;
+}
+
 .margin-top-product {
   margin-top: 5%;
 }
