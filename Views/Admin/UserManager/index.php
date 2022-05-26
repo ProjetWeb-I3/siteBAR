@@ -23,15 +23,14 @@ if (!$_SESSION['adminBAR']) {
 ?>
 
 
-<body>
+<body class="admin-body">
 
-<header id="header">
+<header class="header-admin membres" id="header">
     <a href="../index.php" class="logo">ADMIN</a>
     <ul>
         <i class="fas fa-users-cog fa-2x"></i>
         <li><a href="../../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
     </ul>
-
 </header>
 
 
@@ -40,7 +39,7 @@ if (!$_SESSION['adminBAR']) {
     <!-- barre de gauche -->
     <div class="barre-gauche">
         <ul>
-            <li><a href="../ProductManager/index.php">Articles</a></li>
+            <li><a  href="../ProductManager/index.php">Articles</a></li>
             <li><a href="index.php">Membres</a></li>
             <li><a href="#">Mails</a></li>
         </ul>

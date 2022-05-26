@@ -1048,16 +1048,24 @@ form .pied-formulaire button:hover {
     width: 115%;
   }
 }
-* {
+.admin-body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: "Atkinson Hyperlegible", "Poppins", sans-serif;
+}
+
+.product-manager {
+  font-size: 165%;
+}
+
+.product-managerFontsizetable {
+  font-size: 100%;
 }
 
 /* barre du dessus*/
-header {
+.header-admin {
   position: fixed;
   width: 100%;
   height: 80px;
@@ -1070,7 +1078,7 @@ header {
   box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.6);
 }
 
-header .logo {
+.header-admin .logo {
   color: #fff;
   font-size: 30px;
   text-decoration: none;
@@ -1078,23 +1086,23 @@ header .logo {
   font-weight: 700;
 }
 
-header ul {
+.header-admin ul {
   position: relative;
   display: flex;
 }
 
-header ul li {
+.header-admin ul li {
   position: relative;
   list-style: none;
 }
 
-header ul i {
+.header-admin ul i {
   position: relative;
   padding: 4px 10px;
   color: #fff;
 }
 
-header ul li a {
+.header-admin ul li a {
   position: relative;
   padding: 5px 10px;
   color: #fff;

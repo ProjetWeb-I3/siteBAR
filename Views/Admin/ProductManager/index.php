@@ -18,9 +18,9 @@ if (!$_SESSION['adminBAR']) {
     <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="admin-body product-manager">
 
-<header id="header">
+<header class="header-admin" id="header">
     <a href="../index.php" class="logo">ADMIN</a>
     <ul>
         <i class="fas fa-users-cog fa-2x"></i>
@@ -48,9 +48,9 @@ if (!$_SESSION['adminBAR']) {
             <a href="#" class="btn-group">Gerer les Articles</a>
         </div>
 
-        <div class="content">
+        <div class="content ">
             <h2 class="titre-page"> Gerer les articles</h2>
-            <table>
+            <table class="product-managerFontsizetable">
                 <thead>
                 <th>id</th>
                 <th>Contenu</th>

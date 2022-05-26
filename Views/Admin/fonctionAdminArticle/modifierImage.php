@@ -78,7 +78,7 @@
 <head>
 	<title></title>
 </head>
-<body>
+<body class="admin-body">
 	<h1>Modification image</h1>
 
 

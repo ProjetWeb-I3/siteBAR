@@ -11,7 +11,7 @@ if (!$_SESSION['adminBAR']) {
 
 <!DOCTYPE html>
 <html>
-<head>
+<head >
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceuil - Administration</title>
@@ -19,9 +19,9 @@ if (!$_SESSION['adminBAR']) {
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
+<body class="admin-body">
 
-<header id="header">
+<header class="header-admin" id="header">
     <a href="index.php" class="logo">ADMIN</a>
     <ul>
         <i class="fas fa-users-cog fa-2x"></i>
