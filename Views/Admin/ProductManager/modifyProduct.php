@@ -12,7 +12,7 @@ if (!$_SESSION['adminBAR']) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,24 +22,16 @@ if (!$_SESSION['adminBAR']) {
 </head>
 <body class="admin-body">
 
-<header class="header-admin" id="header">
-    <a href="../index.php" class="logo">ADMIN</a>
-    <ul>
-        <i class="fas fa-users-cog fa-2x"></i>
-        <li><a href="#"> Bienvenue <?= $_SESSION['adminBAR'] ?> </a></li>
-    </ul>
-</header>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
+?>
 
 <div class="admin-wrapper">
 
     <!-- barre de gauche -->
-    <div class="barre-gauche">
-        <ul>
-            <li><a href="/siteBAR/Views/Admin/ProductManager/index.php">Articles</a></li>
-            <li><a href="/siteBAR/Views/Admin/UserManager/index.php">Membres</a></li>
-            <li><a href="#">Mails</a></li>
-        </ul>
-    </div>
+    <?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
+    ?>
 
     <!-- contenu admin -->
 
@@ -60,7 +52,7 @@ if (!$_SESSION['adminBAR']) {
             header('location:../index.php');
         }
 
-        if (!isset($_SESSION['adminBAR']) || empty($_SESSION['adminBAR'])) {
+        if (empty($_SESSION['adminBAR'])) {
             header('location:../index.php');
         }
 
@@ -68,16 +60,13 @@ if (!$_SESSION['adminBAR']) {
             if (!empty($_POST['title']) and !empty($_POST['content'])) {
 
 
-                $req = $conn->prepare('UPDATE products SET name_products = :title, content_products = :content, WHERE id_products = :id');
+                $req = $conn->prepare('UPDATE products SET name_products = :title, content_products = :content WHERE id_products = :id');
                 $req->execute([
-
-
                     'title' => $_POST['title'],
                     'content' => $_POST['content'],
                     'id' => $_GET['id'],
-
-
                 ]);
+
                 $_SESSION['flash']['success'] = 'Article modifié';
                 header('location: /siteBAR/Views/Admin/ProductManager/index.php');
 
