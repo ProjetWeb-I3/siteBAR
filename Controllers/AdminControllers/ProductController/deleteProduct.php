@@ -1,12 +1,6 @@
 <?php
 
-session_start();
-
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
-
-if (!$_SESSION['adminBAR']) {
-    header('location:../login.php');
-}
 
 if (isset($_SESSION['adminBAR']) and !empty($_SESSION['adminBAR'])) {
 
