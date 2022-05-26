@@ -34,8 +34,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
     <div class="admin-content">
 
         <div class="button-group">
-            <a href="../fonctionAdminArticle/addProduct.php" class="btn-group">Ajouter</a>
-            <a href="#" class="btn-group">Gerer les Articles</a>
+            <a href="/siteBAR/Views/Admin/ProductManager/addProduct.php" class="btn-group">Ajouter</a>
         </div>
 
         <div class="content ">

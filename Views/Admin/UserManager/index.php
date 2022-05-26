@@ -88,7 +88,7 @@ if (!$_SESSION['adminBAR']) {
 
                             <a href="modifyUser.php?id=<?= $membres['id_users'] ?>" class="modifier">Modifier</a>
 
-                            <a href="IdeaProjects/siteBAR/Controllers/AdminControllers/UserControllers/deleteUser.php?id=<?= $membres['id_users'] ?>"
+                            <a href="/siteBAR/Controllers/AdminControllers/UserControllers/deleteUser.php?id=<?= $membres['id_users'] ?>"
                                class="supprimer">Supprimer</a>
 
                             <!-- <a href="#" class="publier">publier</a> -->
