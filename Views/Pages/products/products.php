@@ -17,7 +17,7 @@ $stars =
                 <i class="fas fa-star-half-alt"></i>
     </div>';
 $after_price =
-    '<a href="functionADDCart.php?refProductCart=<?= $produits['refProduct'] ?>">Ajouter Panier</a>		
+    '<a href="functionADDCart.php?refProductCart=<?= $produits['refProduct'] ?>">Ajouter Panier</a>		ppppppp
     </div>';
 $image = '<img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">'; //changer le lien par une variable qui boucle sur la BDD
 $name = '<h3>Chouffe</h3>';//changer le nom par une variable qui boucle sur la BDD
