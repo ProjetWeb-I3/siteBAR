@@ -13,8 +13,8 @@
 
 
 
-<?php 
-	
+<?php
+
 	session_start();
 
 
@@ -36,15 +36,15 @@
 				<i class="fas fa-users-cog fa-2x"></i>
 				<li><a href="../../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
 <!-- class="active" onclick="toggle()"-->
-				
+
 			</ul>
-	
-		</header> 
+
+		</header>
 
 
-	
+
 	<div class="admin-wrapper">
-		
+
 		<!-- barre de gauche -->
 		<div class="barre-gauche">
 			<ul>
@@ -52,7 +52,7 @@
 				<li><a href="index.php">Membres</a></li>
 				<li><a href="#">Mails</a></li>
 			</ul>
-			
+
 		</div>
 
 
@@ -62,14 +62,14 @@
 			<div class="button-group">
 				<a href="#" class="btn-group">Ajouter</a>
 				<!-- <a href="#" class="btn-group">Gerer les Services</a> -->
-				
+
 			</div>
-			
+
 			<div class="content">
 
 				<h2 class="titre-page"> Gerer les Membres</h2>
-			
-				
+
+
 
 
 
@@ -98,7 +98,7 @@
 
 							<tr>
 								<td><?= $membres['id_users'] ?> </td>
-								
+
 								<td><?= $membres['lastname_users'] ?> </td>
 
                                 <td><?= $membres['rank_users'] ?> </td>
@@ -109,7 +109,7 @@
 								<td>
 
 
-									<a href="modifierMembre.php?id=<?= $membres['id_users'] ?>" class="modifier">Modifier</a>
+									<a href="modifyUser.php?id=<?= $membres['id_users'] ?>" class="modifier">Modifier</a>
 
 
 									<a href="IdeaProjects/siteBAR/Controllers/AdminControllers/UserControllers/deleteUser.php?id=<?= $membres['id_users'] ?>" class="supprimer">Supprimer</a>
@@ -118,7 +118,7 @@
 									<!-- <a href="#" class="publier">publier</a> -->
 								</td>
 							</tr>
-							
+
 					<?php endforeach ?>
 
 
@@ -143,7 +143,7 @@
 
 
 
-				
+
 
 			</div>
 
@@ -156,7 +156,7 @@
 
 
 
-	</div>	
+	</div>
 
 
 
