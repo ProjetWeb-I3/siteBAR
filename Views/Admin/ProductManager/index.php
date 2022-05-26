@@ -20,24 +20,14 @@ if (!$_SESSION['adminBAR']) {
 </head>
 <body class="admin-body product-manager">
 
-<header class="header-admin" id="header">
-    <a href="../index.php" class="logo">ADMIN</a>
-    <ul>
-        <i class="fas fa-users-cog fa-2x"></i>
-        <li><a href="../../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
-    </ul>
-</header>
-
-<div class="admin-wrapper">
-
-    <!-- barre de gauche -->
-    <div class="barre-gauche">
-        <ul>
-            <li><a href="index.php">Articles</a></li>
-            <li><a href="../UserManager/index.php">Membres</a></li>
-            <li><a href="#">Mails</a></li>
-        </ul>
-    </div>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
+?>
+<div class="admin-flex">
+ <!-- barre de gauche -->
+    <?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
+    ?>
 
     <!-- contenu admin -->
 

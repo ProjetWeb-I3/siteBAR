@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 
@@ -15,31 +16,20 @@ if (!$_SESSION['adminBAR']) {
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceuil - Administration</title>
-    <link rel="stylesheet" type="text/css" href="siteBAR/Views/Admin/style/admin.scss">
+    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
 </head>
 <body class="admin-body">
 
-<header class="header-admin" id="header">
-    <a href="index.php" class="logo">ADMIN</a>
-    <ul>
-        <i class="fas fa-users-cog fa-2x"></i>
-        <li><a href="../../Controllers/UserControllers/logout.php">Deconnexion</a></li>
-    </ul>
-</header>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
+?>
 
 
-<div class="admin-wrapper">
-
-    <!-- barre de gauche -->
-    <div class="barre-gauche">
-        <ul>
-            <li><a href="ProductManager/index.php">Articles</a></li>
-            <li><a href="UserManager/index.php">Membres</a></li>
-            <li><a href="#">Mails</a></li>
-        </ul>
-    </div>
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
+?>
 
     <!-- contenu admin -->
 

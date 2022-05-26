@@ -12,25 +12,17 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php'
 </head>
 <body>
 
-<header id="header">
-    <a href="../index.php" class="logo">ADMIN</a>
-    <ul>
-        <i class="fas fa-users-cog fa-2x"></i>
-        <li><a href="#"> Bienvenue <?= $_SESSION['adminBAR'] ?> </a></li>
-    </ul>
 
-</header>
-
-<div class="admin-wrapper">
 
     <!-- barre de gauche -->
-    <div class="barre-gauche">
-        <ul>
-            <li><a href="/siteBAR/Views/Admin/ProductManager/index.php">Articles</a></li>
-            <li><a href="/siteBAR/Views/Admin/UserManager/index.php">Membres</a></li>
-            <li><a href="#">Mails</a></li>
-        </ul>
-    </div>
+    <?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
+    ?>
+
+<div class="admin-wrapper">
+    <?php
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
+    ?>
 
     <!-- contenu admin -->
 
@@ -61,6 +53,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php'
         </div>
 
     </div>
+</div>
 
 </body>
 </html>

@@ -85,24 +85,22 @@ header ul li a:hover
 
 
 
-
-
-
-
-
-
-
-
+.admin-flex{
+	display: flex;
+	padding-top: 80px;
+	height: 100%;
+}
 
 .admin-wrapper{
 	display: flex;
 	padding-top: 80px;
-	height: 100vh;
+	height: 100%;
 }
 
 .admin-wrapper .barre-gauche
 {
 	flex: 2;
+	flex-direction: row;
 	height: 100%;
 	background: #909090;
 
@@ -136,6 +134,7 @@ header ul li a:hover
 .admin-wrapper .admin-content
 {
 	flex: 8;
+	flex-direction: row;
 	height: 100%;
 	padding: 40px 100px 100px;
 	overflow-y: scroll;
