@@ -2,6 +2,7 @@
 
 <?php
 
+require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 require_once('../../../config.php');
 
 $before_image =
@@ -16,9 +17,9 @@ $stars =
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i>
     </div>';
-$after_price =
-    '<a class="btnPRODUCT" href="../Cart/functionADDCart.php?refProductCart=".$produits["refProduct"]>Ajouter Panier</a>	
-    </div>';
+//$after_price =
+//    '<a class="btnPRODUCT" href="../Cart/functionADDCart.php?refProductCart=".$produits["refProduct"]>Ajouter Panier</a>
+//    </div>';
 $image = '<img src="https://i.ibb.co/Zf8nswZ/chouffe.png" alt="">'; //changer le lien par une variable qui boucle sur la BDD
 $name = '<h3>Chouffe</h3>';//changer le nom par une variable qui boucle sur la BDD
 $price = '<span>2.5</span>'; //changer le prix par une variable qui boucle sur la BDD (données à récupérer avec getProduct.php et productInfo.php)
@@ -70,7 +71,24 @@ require('../../Layouts/navbar.php');
                     echo $article["price_products"];
                     echo '</span>';
 
-                    echo $after_price;
+//                    echo $after_price;
+
+                    if (isset($_SESSION['id_users'])) {
+                        $after_price =
+                            '<a class="btnPRODUCT" href="../Cart/functionADDCart.php?refProductCart=".$produits["refProduct"]>Ajouter Panier</a>	
+    </div>';
+                        echo $after_price;
+
+                    }
+                    else{
+                        $after_price = '<a class="btnPRODUCT">Connectez vous !</a></div>';
+
+                        echo $after_price;
+
+
+                    }
+
+
                 }
 
 

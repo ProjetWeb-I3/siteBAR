@@ -1,4 +1,5 @@
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 require_once('../../../config.php');
 require('../../Layouts/navbar.php');
 
@@ -19,7 +20,7 @@ require('../../Layouts/navbar.php');
 
 <?php
 session_start();
-require_once '../../../Models/DatabaseModel/connect.php';
+//require_once '../../../Models/DatabaseModel/connect.php';
 global $conn;
 $user = $_SESSION['id_users'];
 echo $user;

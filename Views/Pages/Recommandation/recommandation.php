@@ -1,4 +1,5 @@
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 require_once('../../../config.php');
 require('../../Layouts/navbar.php');
 

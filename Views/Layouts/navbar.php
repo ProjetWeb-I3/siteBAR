@@ -32,13 +32,12 @@
             <li class="item primary_animation"><a
                         href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Recommandation/recommandation.php"; ?>">BONS
                     PLANS</a></li>
-            <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Cart/cart.php"; ?>">PANIER</a>
-            </li>
-            <li class="item primary_animation"><a
-                        href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Contact/contact.php"; ?>">CONTACT</a></li>
+
 
 
             <?php
+            session_start();
+
             global $conn;
             if (isset($_SESSION['id_users'])  > 0) {
                 $getid = $_SESSION['id_users'];
@@ -51,6 +50,10 @@
                 <?php
                 if (isset($_SESSION['id_users']) and $userinfo['id_users'] == $_SESSION['id_users']) {
                     ?>
+                    <li class="item primary_animation"><a href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Cart/cart.php"; ?>">PANIER</a>
+                    </li>
+                    <li class="item primary_animation"><a
+                                href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Contact/contact.php"; ?>">CONTACT</a></li>
 
                     <li class="item button "><a class="text-font over_size-connexion"
                                                 href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Authentication/logout.php"; ?>">Deconnexion</a>
@@ -64,6 +67,10 @@
                 <?php
             } else {
                 ?>
+
+
+                <li class="item primary_animation"><a
+                            href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Contact/contact.php"; ?>">CONTACT</a></li>
 
                 <li class="item button "><a class="text-font over_size-connexion"
                                             href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Authentication/login.php"; ?>">Connexion</a>
