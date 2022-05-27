@@ -15,7 +15,7 @@ require('../../Layouts/navbar.php');
 
 </head>
 <body>
-<h1 id="textPanier">voici notre panier</h1>
+
 
 
 <?php
@@ -32,10 +32,11 @@ $produitCart = $req->fetchALL();
 
 
 if($productExist == 0 ){
-    echo "le panier est vide ";
+    echo '<div class="focus-in-contract-bck">le panier est vide </div>';
 }
 else
 { ?>
+    <h1 id="textPanier">voici notre panier</h1>
     <div class ="cart-container">
 <?php    foreach ($produitCart as $produitsCart): ?>
         <div class="product-card">
