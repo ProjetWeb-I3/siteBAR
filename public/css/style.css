@@ -1557,3 +1557,9 @@ th, td {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.largerCheckbox {
+  width: 20px;
+  height: 20px;
+}

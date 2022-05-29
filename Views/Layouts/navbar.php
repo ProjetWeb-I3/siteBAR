@@ -59,7 +59,7 @@
                                                 href="<?php echo $GLOBALS['URL'] . "/Views/Pages/Authentication/logout.php"; ?>">Deconnexion</a>
                     </li>
                     <li class="item button "><a class="text-font over_size-connexion" href=<?php echo $GLOBALS['URL']."/Views/Pages/Profil/profil.php"?>>Profil</a></li>
-                    <!--                <li class="toggle"><span class="bars"></span></li>-->
+                                    <li class="toggle"><span class="bars"></span></li>
 
                     <?php
                 }
