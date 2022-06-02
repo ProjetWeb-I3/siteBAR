@@ -41,7 +41,7 @@ if (isset($_POST) and !empty($_POST)) {
             if (hash_equals($passwordAdminVerif, crypt($passwordAdmin, $passwordAdminVerif))) {
                 if ($rankAdmin == 'ADMIN') {
                     $_SESSION['adminBAR'] = $_POST['mailAdmin'];
-                    header('location:index.php');
+                    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/index.php');
                 } else {
                     $error = "Vous n'êtes pas administrateur ";
                 }

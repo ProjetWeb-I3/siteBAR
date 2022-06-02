@@ -13,14 +13,14 @@
 
 //session_start();
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/Views/Layouts/navbar.php';
+require_once "/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER" . '/config.php';
+require '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
+require '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Views/Layouts/navbar.php';
 
 ?>
 
 
-<link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL']."/public/css/style.css"?>/>
+<link rel="stylesheet" type="text/css" href="<?php echo $GLOBALS['URL_CSS']."/public/css/style.css"?>"/>
 
 <section class="banner" id="home" style="background-image: url(<?php print "Views/img/imageBar/interieur.jpg" ?>);">
     <div class="textBx">

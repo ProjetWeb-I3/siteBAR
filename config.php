@@ -1,3 +1,3 @@
 <?php
 
-$GLOBALS['URL'] = 'http://localhost:63342/siteBAR';
+$GLOBALS['URL_CSS'] = 'https://dev2.icam.fr/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER';

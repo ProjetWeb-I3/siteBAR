@@ -4,10 +4,10 @@ session_start();
 
 global $LoginLink, $RegisterLink, $BDDlink, $IndexLink, $conn;
 
-$BDDlink = $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
-$LoginLink = $_SERVER['DOCUMENT_ROOT'] . "/Views/Pages/Authentication/login.php";
-$RegisterLink = $_SERVER['DOCUMENT_ROOT'] . "/Views/Pages/Authentication/register.php";
-$IndexLink = $_SERVER['DOCUMENT_ROOT'] . "/index.php";
+$BDDlink = '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
+$LoginLink = '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . "/Views/Pages/Authentication/login.php";
+$RegisterLink = '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . "/Views/Pages/Authentication/register.php";
+$IndexLink = '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . "/index.php";
 
 
 function VerifLogin()
@@ -36,7 +36,7 @@ function VerifLogin()
                     $_SESSION['id_users'] = $userinfo['id_users'];
                     $_SESSION['username_users'] = $userinfo['username_users'];
                     $_SESSION['mail_users'] = $userinfo['mail_users'];
-                    header("Location: " . $GLOBALS['URL'] . "/index.php?id_users=" . $_SESSION['id_users']);
+                    header("Location: " . $GLOBALS['URL_CSS'] . "/index.php?id_users=" . $_SESSION['id_users']);
                     $requser->closeCursor();
 
                 } else {
@@ -149,7 +149,7 @@ function Deconnexion()
     $_SESSION = array();//Ecrase tableau de session
     session_unset(); //Detruit toutes les variables de la session en cours
     session_destroy();//Destruit la session en cours
-    header("location: ../../../index.php"); // redirige l'utilisateur
+    header('Location:' . $GLOBALS["URL"]); // redirige l'utilisateur
 
 }
 

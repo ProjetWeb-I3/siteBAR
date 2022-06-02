@@ -8,7 +8,7 @@ require_once('../../../config.php');
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>inscription</title>
-    <link rel="stylesheet" type="text/css" href=<?php echo $URL."/public/css/style.css"?>/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $URL."/public/css/style.css"?>"/>
 </head>
 <body class="body-espaceco">
 
@@ -125,7 +125,7 @@ global $IndexLink, $RegisterLink;
 
 
 			<div class="signup_link">
-				Déjà membre ?<a href="IdeaProjects/siteBAR/Views/Pages/Authentication/login.php"> Connexion</a><a href="<?php echo $IndexLink ; ?>"> / Retour</a><br\>
+				Déjà membre ?<a href="<?php echo $GLOBALS['URL']."/Views/Pages/Authentication/login.php" ?>"> Connexion</a><a href="<?php echo $GLOBALS['URL']."/index.php" ; ?>"> / Retour</a><br\>
                 <br/>
                 <br/>
                 <?php

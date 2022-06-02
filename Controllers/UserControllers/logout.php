@@ -1,14 +1,14 @@
 <?php
-	
-	
-session_start(); 
+
+
+session_start();
 
 require_once '../../Models/DatabaseModel/connect.php';
 
 
-$_SESSION = array();//Ecrase tableau de session 
+$_SESSION = array();//Ecrase tableau de session
 session_unset(); //Detruit toutes les variables de la session en cours
 session_destroy();//Destruit la session en cours
-header("location:../../index.php"); // redirige l'utilisateur
+header('Location:' . $GLOBALS["URL"]); // redirige l'utilisateur
 
 ?>

@@ -68,7 +68,7 @@ function recoverPassword()
 
             $token = uniqid();
 
-            $url = $GLOBALS['URL']."/Views/Pages/Authentication/PasswordRecover/token/index.php?token=$token";
+            $url = $GLOBALS['URL_CSS']."/Views/Pages/Authentication/PasswordRecover/token/index.php?token=$token";
 
             $mail->Body    = "Bonjour, voici votre lien pour la réinitialisation du mdp  $url";
 
