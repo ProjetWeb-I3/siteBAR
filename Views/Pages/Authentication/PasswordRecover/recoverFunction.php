@@ -40,7 +40,9 @@ function recoverPassword()
             $mail->isSMTP();
             $mail->SMTPAuth   = true;
             $mail->Username   = 'starbarsicam@gmail.com';
-            $mail->Password   = 'starbars';
+            $mail->Password   = 'vvlhpghobdikdmhs'; //starbars
+
+
 
 
             //$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
@@ -66,7 +68,7 @@ function recoverPassword()
 
             $token = uniqid();
 
-            $url = "http://localhost:63342/siteBAR/Views/Pages/Authentication/PasswordRecover/token?token=$token";
+            $url = $GLOBALS['URL']."/Views/Pages/Authentication/PasswordRecover/token/index.php?token=$token";
 
             $mail->Body    = "Bonjour, voici votre lien pour la réinitialisation du mdp  $url";
 

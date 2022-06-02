@@ -40,6 +40,7 @@
                 <h4>Documentations</h4>
                 <ul >
                     <li><a href="<?php echo $GLOBALS['URL']."/Views/Pages/Recommandation/recommandation.php";?>">Nos Bons plans</a></li>
+                    <li><a href="<?php echo $GLOBALS['URL']."/Views/Admin";?>">Espace Admin</a></li>
 
                 </ul>
             </div>
