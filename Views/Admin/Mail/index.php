@@ -21,7 +21,7 @@ if (!$_SESSION['adminBAR']) {
 <body class="admin-body product-manager">
 
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php';
+//require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php';
 require('../../../Controllers/AdminControllers/MailController/SendMail.php');
 $SendMail = SendMailPHP();
 ?>
