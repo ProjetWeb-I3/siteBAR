@@ -61,8 +61,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
             if (!empty($_POST['title']) and !empty($_POST['content'])) {
 
 
-                $req = $conn->prepare('UPDATE products SET name_products = :title, content_products = :content WHERE id_products = :id');
+                $req = $conn->prepare('UPDATE products SET name_products = :title, content_products = :content, price_products= :Price WHERE id_products = :id');
                 $req->execute([
+                     'Price' =>$_POST['Price'],
                     'title' => $_POST['title'],
                     'content' => $_POST['content'],
                     'id' => $_GET['id'],
@@ -94,6 +95,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
                 <h4 class="titre">Nom du produit : </h4>
 
                 <input class="form-text" type="text" name="title" value="<?= $articles->name_products ?> "/>
+                <br/>
+                <br/>
+                <h4 class="titre">Prix  : </h4>
+                <input class="form-text" type="text"  name="Price" value="<?= $articles->price_products ?> "/>
                 <br/>
                 <br/>
 

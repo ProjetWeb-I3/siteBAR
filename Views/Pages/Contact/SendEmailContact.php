@@ -27,12 +27,20 @@ function SendMailPHP()
 {
     global $conn, $error;
 
-    if (isset($_POST['formMail'])) {
+    if (isset($_POST['formMailContact'])) {
+        echo "ok";
 
         $MailContent = $_POST['Content'];
+        $PhoneContent = $_POST['Phone'];
+        $mailU = $_POST['Mail'];
+        $NameContent = $_POST['Prenom'];
 
-        $mail = $_POST['formMailAdress'];
-        if(empty($mail))
+
+
+
+
+
+        if(empty($mailU))
         {
 
             $error = 'Selectionnez des utilisateurs';
@@ -47,13 +55,8 @@ function SendMailPHP()
             else{
 
 
-                $N = count($mail);
 
 
-
-                for($i=0; $i < $N; $i++) {
-                    echo($mail[$i]);
-                    $UserMail = strval($mail[$i]);
 
 
                     require 'vendor/autoload.php';
@@ -80,7 +83,7 @@ function SendMailPHP()
 
                     //Recipients
                     $mail->setFrom('starbarsicam@gmail.com', 'starbarsicam@gmail.com');
-                    $mail->addAddress($UserMail);
+                    $mail->addAddress("starbarsicam@gmail.com");
                     $mail->addReplyTo('starbarsicam@gmail.com', 'starbarsicam@gmail.com');
 
 
@@ -88,10 +91,14 @@ function SendMailPHP()
 
 
                     $mail->isHTML(true);
-                    $mail->Subject = utf8_decode('Newsletter Starbars');
+                    $mail->Subject = utf8_decode('Contact Starbars : '.$NameContent);
                     //$mail->Body    = file_get_contents('untitled.html');
 
-                    $mail->Body = $MailContent;
+                    $mail->Body = "Nom : {$NameContent} <br/>
+                                  Phone : {$PhoneContent} <br/>
+                                   Mail  : {$mailU} <br/>
+                                   Contenu : <br/> {$MailContent}
+                                   "  ;
                     $mail->send();
                     $error = 'Mail envoyé';
 
@@ -100,6 +107,5 @@ function SendMailPHP()
         }
 
 
-    }
-}
 
+}

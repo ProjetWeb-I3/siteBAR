@@ -56,9 +56,10 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
         if (isset($_POST) and !empty($_POST)) {
             if (!empty($_POST['pseudo']) and !empty($_POST['mail'])) {
 
-                $req = $conn->prepare('UPDATE users SET username_users = :pseudo, mail_users = :mail WHERE id_users = :id');
+                $req = $conn->prepare('UPDATE users SET username_users = :pseudo, mail_users = :mail, rank_users = :rank WHERE id_users = :id');
                 $req->execute([
 
+                    'rank' =>  $_POST['rank'],
                     'pseudo' => $_POST['pseudo'],
                     'mail' => $_POST['mail'],
                     'id' => $_GET['id'],
@@ -96,12 +97,15 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
                 <br/>
                 <h4 class="titre">Le Mail : </h4>
 
-                <textarea class="area" id="mod" name="mail"><?= $membres->mail_users ?></textarea>
-                <script>
-                    tinymce.init({
-                        selector:'#mod'
-                    });
-                </script>
+                <input class="form-text" type="text" name="mail" value="<?= $membres->mail_users ?> "/>
+
+                <br/>
+                <br/>
+                <select name="rank" >
+                    <option value="">--Rank--</option>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="PUBLIC">PUBLIC</option>
+                </select>
                 <br/>
                 <button class="btnp">Modifier</button>
 

@@ -3,7 +3,8 @@
 require_once('../../../config.php');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
 require('../../Layouts/navbar.php');
-
+require('SendEmailContact.php');
+$SendMail = SendMailPHP()
 ?>
 
 
@@ -21,25 +22,26 @@ require('../../Layouts/navbar.php');
                 rel="stylesheet"
         />
     </head>
+    <body>
     <div class="body-contact">
-    <form>
+    <form method="POST" enctype="multipart/form-data" action="">
         <h1>Contactez-nous</h1>
         <div class="separation"></div>
         <div class="corps-formulaire">
             <div class="gauche">
                 <div class="groupe">
                     <label class="label">Votre Prénom</label>
-                    <input type="text" autocomplete="off" />
+                    <input name="Prenom" type="text" autocomplete="off" />
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="groupe">
                     <label class="label">Votre adresse e-mail</label>
-                    <input type="text" autocomplete="off" />
+                    <input name="Mail" type="text" autocomplete="off" />
                     <i class="fas fa-envelope"></i>
                 </div>
                 <div class="groupe">
                     <label class="label">Votre téléphone</label>
-                    <input type="text" autocomplete="off" />
+                    <input name="Phone" type="text" autocomplete="off" />
                     <i class="fas fa-mobile"></i>
                 </div>
             </div>
@@ -47,17 +49,29 @@ require('../../Layouts/navbar.php');
             <div class="droite">
                 <div class="groupe">
                     <label class="label">Message</label>
-                    <textarea placeholder="Saisissez ici..."></textarea>
+                    <textarea name="Content" placeholder="Saisissez ici..."></textarea>
                 </div>
             </div>
         </div>
 
         <div class="pied-formulaire" align="center">
-            <button>Envoyer le message</button>
+            <button name="formMailContact">Envoyer le message</button>
+        </div>
+
+        <br/>
+        <div class="pied-formulaire" align="center">
+            <h2>
+                <?php
+                $Err = errorFormMail();
+                ?>
+            </h2>
         </div>
     </form>
     <div>
+
+
+
+    </body>
     </html>
 
 
-<?php //require('../../Layouts/footer.php'); ?>
