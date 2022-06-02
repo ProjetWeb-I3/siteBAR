@@ -8,9 +8,7 @@ require_once('../../../../config.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Récuperation mot de passe</title>
     <link rel="stylesheet" type="text/css" href=
-        <?php
-            echo $URL."/public/css/style.css";
-        ?>
+    <?php echo $GLOBALS['URL_CSS']."/public/css/style.css"?>
     />
 
 </head>
