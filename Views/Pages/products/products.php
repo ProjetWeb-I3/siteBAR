@@ -1,8 +1,6 @@
-<!-- produitBiere section starts  -->
-
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
+require '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
 require_once('../../../config.php');
 
 
@@ -11,7 +9,7 @@ require('../../Layouts/navbar.php');
 ?>
 
 
-<link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
+<link rel="stylesheet" type="text/css" href="<?php echo $GLOBALS['URL_CSS'] . "/public/css/style.css" ?>"/>
 <!--<section class="produitBiere" id="produitBiere">-->
 
 <div class="produitBiere">
@@ -74,7 +72,7 @@ require('../../Layouts/navbar.php');
             <?php endforeach ?>
 
 
-            
+
 
         </div>
 

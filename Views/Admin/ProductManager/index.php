@@ -2,10 +2,10 @@
 
 session_start();
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
+require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/config.php';
 
 if (!$_SESSION['adminBAR']) {
-    header('Location: /siteBAR/Views/Admin/login.php');
+    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/login.php');
 }
 ?>
 
@@ -14,19 +14,19 @@ if (!$_SESSION['adminBAR']) {
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADMIN | Articles</title>
-    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $GLOBALS['URL_CSS'] . "/public/css/style.css" ?>"/>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body class="admin-body product-manager">
 
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
+require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Views/Admin/Layouts/navbarAdmin.php'
 ?>
 
 <div class="admin-wrapper">
     <!-- barre de gauche -->
     <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
+    require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Views/Admin/Layouts/leftNavbarAdmin.php'
     ?>
 
     <!-- contenu admin -->
@@ -50,7 +50,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
                 <?php
 
                 global $conn;
-                require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
+                require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
 
                 $req = $conn->query('SELECT * FROM products');
                 $product = $req->fetchALL();

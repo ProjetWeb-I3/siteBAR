@@ -31,7 +31,7 @@ if(isset($_GET['token']) && $_GET['token'] != '')
         <title>Récuperation mot de passe</title>
         <link rel="stylesheet" type="text/css" href=
         <?php
-        echo $GLOBALS['URL']."/public/css/style.css";
+        echo $GLOBALS['URL_CSS']."/public/css/style.css";
         ?>
         />
 

@@ -2,11 +2,11 @@
 
 session_start();
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Models/DatabaseModel/connect.php';
+require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/config.php';
+require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
 
 if (!$_SESSION['adminBAR']) {
-    header('Location: /siteBAR/Views/Admin/login.php');
+    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/login.php');
 }
 ?>
 
@@ -15,7 +15,7 @@ if (!$_SESSION['adminBAR']) {
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL'] . "/public/css/style.css" ?>/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $GLOBALS['URL_CSS'] . "/public/css/style.css" ?>"/>
 
     <title>ADMIN | Membre</title>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -24,13 +24,13 @@ if (!$_SESSION['adminBAR']) {
 <body class="admin-body">
 
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
+require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Views/Admin/Layouts/navbarAdmin.php'
 ?>
 
 <div class="admin-wrapper">
     <!-- barre de gauche -->
     <?php
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/leftNavbarAdmin.php'
+    require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Views/Admin/Layouts/leftNavbarAdmin.php'
     ?>
 
     <!-- contenu admin -->
@@ -41,16 +41,16 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
 
         <?php
 
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/Controllers/AdminControllers/UserControllers/getUser.php';
+        require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Controllers/AdminControllers/UserControllers/getUser.php';
         global $conn;
         $membres = getMembre($conn, 1, $_GET['id']);
 
         if (!isset($_GET['id'])) {
-            header('location:index.php');
+            header('Location:' . $GLOBALS["URL"] . '/Views/Admin/UserManager/index.php');
         }
 
         if (empty($_SESSION['adminBAR'])) {
-            header('location:index.php');
+            header('Location:' . $GLOBALS["URL"] . '/Views/Admin/UserManager/index.php');
         }
 
         if (isset($_POST) and !empty($_POST)) {
@@ -67,7 +67,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/Views/Admin/Layouts/navbarAdmin.php'
                 ]);
 
                 $_SESSION['flash']['success'] = 'Article modifié';
-                header('location:index.php');
+                header('Location:' . $GLOBALS["URL"] . '/Views/Admin/UserManager/index.php');
 
             } else {
                 $_SESSION['flash']['error'] = 'champs manquants';
