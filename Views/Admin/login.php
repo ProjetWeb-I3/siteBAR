@@ -16,7 +16,7 @@ session_start()
 
 <?php
 
-require('../../Models/DatabaseModel/connect.php');
+require('/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php');
 global $conn;
 
 if (isset($_POST) and !empty($_POST)) {
@@ -41,7 +41,7 @@ if (isset($_POST) and !empty($_POST)) {
             if (hash_equals($passwordAdminVerif, crypt($passwordAdmin, $passwordAdminVerif))) {
                 if ($rankAdmin == 'ADMIN') {
                     $_SESSION['adminBAR'] = $_POST['mailAdmin'];
-                    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/index.php');
+                    header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/index.php');
                 } else {
                     $error = "Vous n'êtes pas administrateur ";
                 }

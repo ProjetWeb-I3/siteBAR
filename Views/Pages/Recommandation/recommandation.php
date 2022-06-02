@@ -1,7 +1,8 @@
 <?php
 require '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
-require_once('../../../config.php');
-require('../../Layouts/navbar.php');
+require_once "/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER" . '/config.php';
+
+require('/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Views/Layouts/navbar.php');
 
 ?>
 <div>
@@ -41,4 +42,4 @@ require('../../Layouts/navbar.php');
             </div>
         </div>
     </div>
-    <?php require('../../Layouts/footer.php'); ?>
+    <?php require('/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Views/Layouts/footer.php'); ?>

@@ -3,7 +3,8 @@
 //Récupérer les données de l'utilisateur
 session_start();
 global $conn;
-require_once '../../../Models/DatabaseModel/connect.php';
+require '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
+
 $getid = $_SESSION['id_users'];
 $requser = $conn->prepare('SELECT * FROM users WHERE id_users = ?');
 $requser->execute(array($getid));

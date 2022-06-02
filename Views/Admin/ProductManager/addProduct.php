@@ -29,7 +29,7 @@ require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHE
 
         <h2 class="titre-page">Pour ajouter un produit</h2>
         <div id="content">
-            <form method="post" action="/siteBAR/Controllers/AdminControllers/ProductController/addProduct.php" enctype="multipart/form-data">
+            <form method="post" action="addProduct.php" enctype="multipart/form-data">
                 <input type="hidden" name="size" value="1000000">
 
                 <div>

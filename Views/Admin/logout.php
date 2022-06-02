@@ -2,9 +2,9 @@
 
 session_start();
 
-require("../../Models/DatabaseModel/connect.php");
+require('/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER'. '/Models/DatabaseModel/connect.php');
 
 $_SESSION = array();
 session_unset();
 session_destroy();
-header("location: ../../index.php");
+header('Location :/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' .  '/index.php');

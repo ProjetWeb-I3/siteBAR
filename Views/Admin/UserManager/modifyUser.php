@@ -6,7 +6,7 @@ require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHE
 require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
 
 if (!$_SESSION['adminBAR']) {
-    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/login.php');
+    header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/login.php');
 }
 ?>
 
@@ -46,11 +46,11 @@ require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHE
         $membres = getMembre($conn, 1, $_GET['id']);
 
         if (!isset($_GET['id'])) {
-            header('Location:' . $GLOBALS["URL"] . '/Views/Admin/UserManager/index.php');
+            header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/UserManager/index.php');
         }
 
         if (empty($_SESSION['adminBAR'])) {
-            header('Location:' . $GLOBALS["URL"] . '/Views/Admin/UserManager/index.php');
+            header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/UserManager/index.php');
         }
 
         if (isset($_POST) and !empty($_POST)) {
@@ -67,7 +67,7 @@ require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHE
                 ]);
 
                 $_SESSION['flash']['success'] = 'Article modifié';
-                header('Location:' . $GLOBALS["URL"] . '/Views/Admin/UserManager/index.php');
+                header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/UserManager/index.php');
 
             } else {
                 $_SESSION['flash']['error'] = 'champs manquants';

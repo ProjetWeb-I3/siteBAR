@@ -5,7 +5,7 @@ session_start();
 require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/config.php';
 
 if (!$_SESSION['adminBAR']) {
-    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/login.php');
+    header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/login.php');
 }
 ?>
 
@@ -34,7 +34,7 @@ require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHE
     <div class="admin-content">
 
         <div class="button-group">
-            <a href="/siteBAR/Views/Admin/ProductManager/addProduct.php" class="btn-group">Ajouter</a>
+            <a href="addProduct.php" class="btn-group">Ajouter</a>
         </div>
 
         <div class="content ">

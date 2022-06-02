@@ -6,7 +6,7 @@ require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHE
 require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
 
 if (!$_SESSION['adminBAR']) {
-    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/login.php');
+    header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/login.php');
 }
 ?>
 
@@ -54,7 +54,7 @@ if (!$_SESSION['adminBAR']) {
 
                     <?php
                     global $conn;
-                    require_once '../../../Models/DatabaseModel/connect.php';
+                    require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
                     $req = $conn->query('SELECT * FROM users');
 
                     $membre = $req->fetchALL();
@@ -69,10 +69,10 @@ if (!$_SESSION['adminBAR']) {
 
                             <td>
 
-                                <a href="/siteBAR/Views/Admin/UserManager/modifyUser.php?id=<?= $membres['id_users'] ?>"
+                                <a href="<?php echo $GLOBALS['URL_CSS']."/Views/Admin/UserManager/modifyUser.php?id=".$membres['id_users']?>"
                                    class="modifier">Modifier</a>
 
-                                <a href="/siteBAR/Controllers/AdminControllers/UserControllers/deleteUser.php?id=<?= $membres['id_users'] ?>"
+                                <a href="<?php echo $GLOBALS['URL_CSS']."/Controllers/AdminControllers/UserControllers/deleteUser.php?id=".$membres['id_users']?>"
                                    class="supprimer">Supprimer</a>
                             </td>
                         </tr>

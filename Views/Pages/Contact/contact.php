@@ -1,8 +1,8 @@
 <?php
 
-require_once('../../../config.php');
+require_once "/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER" . '/config.php';
 require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
-require('../../Layouts/navbar.php');
+require('/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Views/Layouts/navbar.php');
 require('SendEmailContact.php');
 $SendMail = SendMailPHP()
 ?>

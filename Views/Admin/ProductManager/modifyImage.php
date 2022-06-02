@@ -5,7 +5,7 @@
     require '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
 
     if (!$_SESSION['adminBAR']) {
-        header('Location:' . $GLOBALS["URL"] . '/Views/Admin/login.php');
+        header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/login.php');
     }
 
 

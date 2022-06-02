@@ -1,4 +1,5 @@
-<?php require_once('../../../config.php');
+<?php
+require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/config.php';
 ?>
 
 <!DOCTYPE html>
@@ -52,7 +53,6 @@ global $IndexLink, $RegisterLink;
 					Pas encore membre ?<a href="<?php echo $GLOBALS['URL_CSS']."/Views/Pages/Authentication/register.php" ?>"> Inscrivez-vous</a><br\>
 					<a href="<?php echo $GLOBALS['URL_CSS']."/index.php" ; ?>">/ Retour</a><br\>
 				</div>
-<!--                '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER'-->
 				<div class="errorForm">
 					<h2>
 						<?php $Err = errorForm(); ?>

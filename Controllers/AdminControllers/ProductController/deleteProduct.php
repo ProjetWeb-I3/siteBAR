@@ -10,6 +10,6 @@ if (isset($_GET['id'])) {
     if ($articles) {
         $req = $conn->query('DELETE FROM products WHERE id_products = ' . $_GET['id']);
     }
-    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/ProductManager/index.php');
+    header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/ProductManager/index.php');
 
 }

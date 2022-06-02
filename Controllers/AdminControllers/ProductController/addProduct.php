@@ -14,7 +14,7 @@ if (isset($_POST['upload'])) {
     $sql = "INSERT INTO products (name_products ,image_products, content_products) VALUES('$name','$image','$text')";
     $req = $conn->query($sql);
 
-    header('Location:' . $GLOBALS["URL"] . '/Views/Admin/ProductManager/index.php');
+    header('Location:' . $GLOBALS['URL_CSS'] . '/Views/Admin/ProductManager/index.php');
 
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
         $msg = "image importée avec succès";

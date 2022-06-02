@@ -3,7 +3,7 @@
 session_start();
 
 global $user,$MoreLess,$ref;
-require_once '../../../Models/DatabaseModel/connect.php';
+require '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHER' . '/Models/DatabaseModel/connect.php';
 global $conn;
 
 
@@ -20,12 +20,12 @@ $QTY = $request['quantity_carts'];
 	if ($MoreLess == 0)
 	{
 
-			
-			
+
+
 			$QTYNew = $QTY - 1;
 			$req2 = $conn->exec("UPDATE carts SET quantity_carts = '$QTYNew' WHERE id_products = '$ref' AND id_users = '$user' ");
 			header('location:cart.php');
-			
+
 			if ($QTYNew == 0 )
 			{
 				$req = $conn->query("DELETE FROM carts WHERE id_products = '$ref' ");
@@ -39,7 +39,7 @@ $QTY = $request['quantity_carts'];
 			$QTYNew = $QTY + 1;
 			$req2 = $conn->exec("UPDATE carts SET quantity_carts = '$QTYNew' WHERE id_products = '$ref' AND id_users = '$user' ");
 
-			header('location:cart.php');	
+			header('location:cart.php');
 
 	}
 
