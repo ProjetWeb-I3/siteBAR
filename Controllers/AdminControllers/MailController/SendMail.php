@@ -31,8 +31,8 @@ function SendMailPHP()
 
         $MailContent = $_POST['Content'];
 
-        $mail = $_POST['formMailAdress'];
-        if(empty($mail))
+        $mailA = $_POST['formMailAdress'];
+        if(empty($mailA))
         {
 
             $error = 'Selectionnez des utilisateurs';
@@ -47,13 +47,20 @@ function SendMailPHP()
             else{
 
 
-                $N = count($mail);
+                $N = count($mailA);
 
 
+                for($i=0;$i<sizeof($mailA);$i++){
 
-                for($i=0; $i < $N; $i++) {
-                    echo($mail[$i]);
-                    $UserMail = strval($mail[$i]);
+
+//                    echo $mail[$i].' cochee <br />';
+//                }
+
+
+//                for($i=0; $i < $N; $i++) {
+                    echo($mailA[$i]);
+//                    $UserMail = strval($mail[$i]);
+
 
 
                     require 'vendor/autoload.php';
@@ -64,7 +71,7 @@ function SendMailPHP()
 
 
                     //Server settings
-                    //                $mail->SMTPDebug = 1;
+//                                    $mail->SMTPDebug = 1;
                     $mail->isSMTP();
                     $mail->SMTPAuth = true;
                     $mail->Username = 'starbarsicam@gmail.com';
@@ -80,7 +87,7 @@ function SendMailPHP()
 
                     //Recipients
                     $mail->setFrom('starbarsicam@gmail.com', 'starbarsicam@gmail.com');
-                    $mail->addAddress($UserMail);
+                    $mail->addAddress($mailA[$i]);
                     $mail->addReplyTo('starbarsicam@gmail.com', 'starbarsicam@gmail.com');
 
 
