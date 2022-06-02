@@ -8,7 +8,7 @@ require_once '/var/www/DEV/toulouse/i3m4/web/LASSERRE_LEBOULCH_GAUTHEREAU_LARCHE
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>inscription</title>
-    <link rel="stylesheet" type="text/css" href=<?php echo $GLOBALS['URL_CSS'] . "/public/css/style.css" ?>/>
+    <link rel="stylesheet" type="text/css" href="<?php echo $GLOBALS['URL_CSS'] . "/public/css/style.css" ?>"/>
 </head>
 <body class="body-espaceco">
 
